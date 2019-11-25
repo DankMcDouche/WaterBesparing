@@ -11,7 +11,7 @@ public class InteractableObjects : MonoBehaviour
     public Button Keuze3;
     public Button Keuze4;
 
-
+    //puts the WC button on true and all other buttons false
     void OnEnable()
     {
         WC.gameObject.SetActive(true);
@@ -21,7 +21,7 @@ public class InteractableObjects : MonoBehaviour
         Keuze4.gameObject.SetActive(false);
 
     }
-
+    //disablesAllButtons
     private void disableAllButtons()
     {
         WC.gameObject.SetActive(false);
@@ -30,7 +30,7 @@ public class InteractableObjects : MonoBehaviour
         Keuze3.gameObject.SetActive(false);
         Keuze4.gameObject.SetActive(false);
     }
-
+    //enables one button 
     public void EnableButton(Button _toEnable)
     {
         disableAllButtons();
