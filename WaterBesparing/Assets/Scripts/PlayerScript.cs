@@ -21,7 +21,7 @@ public class PlayerScript : MonoBehaviour
         {
             foreach (Touch touch in Input.touches)
             {
-                Ray ray = GetComponent<Camera>().ScreenPointToRay(touch.position);
+                Ray ray = Camera.main.ScreenPointToRay(touch.position);
                 RaycastHit Hit;
                 if (Physics.Raycast(ray, out Hit, touchInputMask))
                 {
