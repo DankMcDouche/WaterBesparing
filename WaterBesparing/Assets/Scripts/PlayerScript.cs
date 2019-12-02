@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
     public List<GameObject> waypoints;
-    public GameObject KitchenBlock;
     public int Destination = 0;
     public LayerMask touchInputMask;
 
