@@ -12,4 +12,5 @@ public class TouchScreen : MonoBehaviour
         player.Destination = 1;
         print("I got TOOCHED");
     }
+
 }
