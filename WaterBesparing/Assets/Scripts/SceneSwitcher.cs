@@ -16,7 +16,7 @@ public class SceneSwitcher : MonoBehaviour
 
     public void GotoGameScene()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("MainGame");
     }
 
     public void GotoEndScene()
