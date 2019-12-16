@@ -24,4 +24,8 @@ public class SceneSwitcher : MonoBehaviour
         SceneManager.LoadScene("End");
     }
 
+    public void GotoCreditsScene()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }
