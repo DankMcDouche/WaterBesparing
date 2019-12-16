@@ -4,45 +4,43 @@ using UnityEngine;
 using UnityEngine.UI; 
 public class InteractableObjects : MonoBehaviour
 {
+    public Image waterSlider; 
 
-    public Button WC;
+    public Button Keuze0;
     public Button Keuze1;
     public Button Keuze2;
     public Button Keuze3;
-    public Button Keuze4;
 
-    //puts the WC button on true and all other buttons false
-    void OnEnable()
+     
+
+    public void Start()
     {
-        WC.gameObject.SetActive(true);
+        Keuze0.gameObject.SetActive(true);
         Keuze1.gameObject.SetActive(false);
         Keuze2.gameObject.SetActive(false);
         Keuze3.gameObject.SetActive(false);
-        Keuze4.gameObject.SetActive(false);
 
-    }
-    //disablesAllButtons
-    private void disableAllButtons()
-    {
-        WC.gameObject.SetActive(false);
-        Keuze1.gameObject.SetActive(false);
-        Keuze2.gameObject.SetActive(false);
-        Keuze3.gameObject.SetActive(false);
-        Keuze4.gameObject.SetActive(false);
-    }
-    //enables one button 
-    public void EnableButton(Button _toEnable)
-    {
-        disableAllButtons();
-        _toEnable.gameObject.SetActive(true);
-    }
-
-    void Start()
-    {
+        
         
     }
+    public void ActiveButton()
+    {
+        Keuze0.gameObject.SetActive(false);
+        Keuze1.gameObject.SetActive(true);
+        Keuze2.gameObject.SetActive(true);
+        Keuze3.gameObject.SetActive(true);
+    }
 
-    void Update()
+    public void AddWater()
+    {
+        if(Keuze1 == true)
+        {
+            waterSlider.fillAmount = 0.1f;
+            
+        }
+            
+    }
+    public void Update()
     {
         
     }
