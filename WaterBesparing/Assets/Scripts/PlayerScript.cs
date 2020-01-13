@@ -1,6 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+
+public enum RoomPos
+{
+    BedroomEnum,
+    BathroomEnum,
+    KitchenEnum,
+    Outside,
+    Garage
+}
 
 public class PlayerScript : MonoBehaviour
 {
@@ -8,12 +18,18 @@ public class PlayerScript : MonoBehaviour
     public int Destination = 0;
     public LayerMask touchInputMask;
 
-
-    public float minDist;
-    public float speed;
-    public float dist;
+    RoomPos Movement = RoomPos.BedroomEnum;
 
     public bool active = true;
+
+    public GameObject TestPoint;
+
+    public NavMeshAgent agent;
+
+    public void Start()
+    {
+        agent = GetComponent<NavMeshAgent>();
+    }
 
     void Update()
     {
@@ -35,71 +51,42 @@ public class PlayerScript : MonoBehaviour
             }
         }
 
-        dist = Vector3.Distance(gameObject.transform.position, waypoints[Destination].transform.position);
-
-        if (active)
+        switch (Movement)
         {
+            case RoomPos.BedroomEnum:
+                if (Input.GetKeyDown(KeyCode.H))
+                {
+                    agent.destination = waypoints[1].transform.position;
+                    Movement = RoomPos.BathroomEnum;
+                }
+                break;
+            case RoomPos.BathroomEnum:
+                if (Input.GetKeyDown(KeyCode.A))
+                {
+                    agent.destination = waypoints[2].transform.position;
+                    Movement = RoomPos.BathroomEnum;
+                }
+                break;
+            case RoomPos.KitchenEnum:
+                if (Input.GetKeyDown(KeyCode.A))
+                {
 
-            if (dist < minDist)
-            {
-                // Hallway Upstairs
-                if (Destination == 1)
-                {
-                    Destination = 2;
                 }
-                else if (Destination == 2)
+                break;
+            case RoomPos.Outside:
+                if (Input.GetKeyDown(KeyCode.A))
                 {
-                    Destination = 3;
-                }
-                else if (Destination == 3)
-                {
-                    Destination = 4;
-                }
-                //stairs
-                if (Destination == 5)
-                {
-                    Destination = 6;
-                }
-                else if (Destination == 6)
-                {
-                    Destination = 7;
-                }
-                else if (Destination == 7)
-                {
-                    Destination = 8;
-                }
-                else if (Destination == 8)
-                {
-                    Destination = 9;
-                }
-                else if (Destination == 9)
-                {
-                    Destination = 10;
-                }
-                else if (Destination == 10)
-                {
-                    Destination = 11;
-                }
 
-            }
-
-            if (dist > minDist)
-            {
-                Move();
-            }
-            else
-            {
-                if (Input.GetKeyDown(KeyCode.Alpha1))
-                {
-                    Destination++;
                 }
-            }
+                break;
+            case RoomPos.Garage:
+                if (Input.GetKeyDown(KeyCode.A))
+                {
+
+                }
+                break;
         }
-    }
 
-    private void Move()
-    {
-        gameObject.transform.LookAt(waypoints[Destination].transform.position);
-        gameObject.transform.position += gameObject.transform.forward * speed * Time.deltaTime;
     }
 }
+
