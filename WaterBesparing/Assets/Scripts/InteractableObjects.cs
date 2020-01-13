@@ -19,6 +19,8 @@ public class InteractableObjects : MonoBehaviour
         Keuze2.gameObject.SetActive(true);
         Keuze3.gameObject.SetActive(true);
 
+
+
     }
    
     public void AddWater()
