@@ -4,9 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
-    public Image waterSlider;
-    public Text UsedWater; 
-
     void Start()
     {
         
