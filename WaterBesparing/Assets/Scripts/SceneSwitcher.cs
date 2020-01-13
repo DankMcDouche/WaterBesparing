@@ -7,8 +7,11 @@ using UnityEngine.UI;
 
 public class SceneSwitcher : MonoBehaviour
 {
+    public void Start()
+    {
+        DontDestroyOnLoad(this.gameObject);
 
-
+    }
     public void GotoStartScene()
     {
         SceneManager.LoadScene("Start");

@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class Score : MonoBehaviour
+public class Score : InteractableObjects
 {
-    public Image waterSlider;
-    public Text UsedWater; 
+    public Image WaterSlider;
+   
 
-    void Start()
+    private void Start()
     {
         
     }
 
-    void Update()
+    private void Update()
     {
         
     }
