@@ -5,8 +5,27 @@ using UnityEngine;
 public class UImanager : MonoBehaviour
 {
 
-    [SerializeField] public GameObject KitchenKeuze_1; 
-   // bool kitchenActive; 
+    //[SerializeField] public GameObject KitchenKeuze_1;
+    //[SerializeField] public GameObject KitchenKeuze_2; 
+    //[SerializeField] public GameObject KitchenKeuze_3; 
+
+    //[SerializeField] public GameObject KitchenKeuze_1; 
+    //[SerializeField] public GameObject KitchenKeuze_2; 
+    //[SerializeField] public GameObject KitchenKeuze_3; 
+
+    //[SerializeField] public GameObject KitchenKeuze_1; 
+    //[SerializeField] public GameObject KitchenKeuze_2; 
+    //[SerializeField] public GameObject KitchenKeuze_3; 
+
+    //[SerializeField] public GameObject KitchenKeuze_1; 
+    //[SerializeField] public GameObject KitchenKeuze_2; 
+    //[SerializeField] public GameObject KitchenKeuze_3; 
+
+    //[SerializeField] public GameObject KitchenKeuze_1; 
+    //[SerializeField] public GameObject KitchenKeuze_2; 
+    //[SerializeField] public GameObject KitchenKeuze_3;
+
+    // bool kitchenActive; 
     void Start()
     {
         DontDestroyOnLoad(this); 
