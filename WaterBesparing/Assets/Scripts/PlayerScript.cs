@@ -123,7 +123,7 @@ public class PlayerScript : MonoBehaviour
                 if (dist <= 2)
                 {
                     print("Tiddies");
-                    UIMAN.kitchenActive = true;
+                    UIMAN.PlantenWaterenActive = true;
                 }
                 break;
             case RoomPos.Garage:
@@ -136,7 +136,7 @@ public class PlayerScript : MonoBehaviour
                 if (dist <= 2)
                 {
                     print("Tiddies");
-                    UIMAN.kitchenActive = true;
+                    //UIMAN.Active = true;
                 }
                 break;
         }

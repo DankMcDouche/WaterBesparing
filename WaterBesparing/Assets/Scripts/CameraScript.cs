@@ -30,25 +30,25 @@ public class CameraScript : MonoBehaviour
             Camera.main.transform.position = RoomPositions[rooms].transform.position;
             Camera.main.transform.rotation = RoomPositions[rooms].transform.rotation;
         }
-        else if (PlayerEnum == RoomPos.BathroomEnum)
+        if (PlayerEnum == RoomPos.BathroomEnum)
         {
             rooms = 1;
             Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 0.05f);
             Camera.main.transform.rotation = RoomPositions[rooms].transform.rotation;
         }
-        else if (PlayerEnum == RoomPos.KitchenEnum)
+        if (PlayerEnum == RoomPos.KitchenEnum)
         {
             rooms = 2;
             Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 0.1f);
             Camera.main.transform.rotation = RoomPositions[rooms].transform.rotation;
         }
-        else if (PlayerEnum == RoomPos.Garage)
+        if (PlayerEnum == RoomPos.Garage)
         {
             rooms = 3;
             Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 0.1f);
             Camera.main.transform.rotation = RoomPositions[rooms].transform.rotation;
         }
-        else if (PlayerEnum == RoomPos.Outside)
+        if (PlayerEnum == RoomPos.Outside)
         {
             rooms = 4;
             Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 0.1f);
