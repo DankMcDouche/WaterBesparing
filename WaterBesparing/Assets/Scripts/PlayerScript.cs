@@ -29,16 +29,32 @@ public class PlayerScript : MonoBehaviour
     public UImanager UIMAN;
 
     public NavMeshAgent agent;
+    public Animator animator;
+    public Rigidbody rb;
 
+    private Vector3 direction; 
     public void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        
+        animator = GetComponent<Animator>();
+
+        //animator.SetBool("walking", false);
     }
 
     void Update()
     {
+        direction = new Vector3(Input.GetAxis("Horizontal"), 0f, (Input.GetAxis("Vertical")));
+        direction.Normalize();
 
+        if (direction.magnitude > .1f )
+        {
+            animator.SetBool("walking", true); 
+        }
+        else 
+        {
+            animator.SetBool("walking", false);
+
+        }
         if (Input.touchCount > 0)
         {
             foreach (Touch touch in Input.touches)

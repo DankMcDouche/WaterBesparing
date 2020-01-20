@@ -3678,6 +3678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KitchenKeuze_1: {fileID: 1423644642}
+  kitchenActive: 0
 --- !u!4 &1563325859
 Transform:
   m_ObjectHideFlags: 0
@@ -3932,7 +3933,10 @@ MonoBehaviour:
     m_Bits: 0
   active: 1
   TestPoint: {fileID: 0}
+  UIMAN: {fileID: 1563325858}
   agent: {fileID: 1741133893}
+  animator: {fileID: 1741133892}
+  rb: {fileID: 1741133896}
 --- !u!54 &1741133896
 Rigidbody:
   m_ObjectHideFlags: 0
