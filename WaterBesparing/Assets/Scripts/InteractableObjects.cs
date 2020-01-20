@@ -11,16 +11,14 @@ public class InteractableObjects : MonoBehaviour
     public Button Keuze2;
     public Button Keuze3;
 
+
      
 
     public void Start()
     {
-        Keuze1.gameObject.SetActive(true);
-        Keuze2.gameObject.SetActive(true);
-        Keuze3.gameObject.SetActive(true);
-
-
-
+       Keuze1.gameObject.SetActive(false);
+       Keuze2.gameObject.SetActive(false);
+       Keuze3.gameObject.SetActive(false);
     }
    
     public void AddWater()
