@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class UImanager : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    [SerializeField] public GameObject KitchenKeuze_1; 
+   // bool kitchenActive; 
     void Start()
     {
-        
+        DontDestroyOnLoad(this); 
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            KitchenKeuze_1.gameObject.SetActive(true); 
+        }
     }
 }
