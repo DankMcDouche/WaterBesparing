@@ -17,6 +17,7 @@ public class PlayerScript : MonoBehaviour
     public List<GameObject> waypoints;
     public int Destination = 0;
     public LayerMask touchInputMask;
+    InteractableObjects interactableObjects;
 
     RoomPos Movement = RoomPos.BedroomEnum;
 
@@ -51,10 +52,13 @@ public class PlayerScript : MonoBehaviour
             }
         }
 
+        
+
         switch (Movement)
         {
             case RoomPos.BedroomEnum:
-                if (Input.GetKeyDown(KeyCode.H))
+                
+                if (Input.GetKeyDown(KeyCode.A))
                 {
                     agent.destination = waypoints[1].transform.position;
                     Movement = RoomPos.BathroomEnum;
@@ -64,25 +68,36 @@ public class PlayerScript : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.A))
                 {
                     agent.destination = waypoints[2].transform.position;
-                    Movement = RoomPos.BathroomEnum;
+                    Movement = RoomPos.KitchenEnum;
                 }
+                float dist = Vector3.Distance(waypoints[1].transform.position, transform.position);
+                if (dist <= 1)
+                {
+                    interactableObjects.Keuze1.gameObject.SetActive(true);
+                    interactableObjects.Keuze2.gameObject.SetActive(true);
+                    interactableObjects.Keuze3.gameObject.SetActive(true);
+                }
+
                 break;
             case RoomPos.KitchenEnum:
                 if (Input.GetKeyDown(KeyCode.A))
                 {
-
+                    agent.destination = waypoints[3].transform.position;
+                    Movement = RoomPos.Garage;
                 }
                 break;
             case RoomPos.Outside:
                 if (Input.GetKeyDown(KeyCode.A))
                 {
-
+                    agent.destination = waypoints[0].transform.position;
+                    Movement = RoomPos.BedroomEnum;
                 }
                 break;
             case RoomPos.Garage:
                 if (Input.GetKeyDown(KeyCode.A))
                 {
-
+                    agent.destination = waypoints[4].transform.position;
+                    Movement = RoomPos.Outside;
                 }
                 break;
         }
