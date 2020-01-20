@@ -5,34 +5,17 @@ using UnityEngine;
 public class UImanager : MonoBehaviour
 {
 
-    //[SerializeField] public GameObject KitchenKeuze_1;
-    //[SerializeField] public GameObject KitchenKeuze_2; 
-    //[SerializeField] public GameObject KitchenKeuze_3; 
 
-    //[SerializeField] public GameObject KitchenKeuze_1; 
-    //[SerializeField] public GameObject KitchenKeuze_2; 
-    //[SerializeField] public GameObject KitchenKeuze_3; 
+    [SerializeField] public GameObject KitchenKeuze_1; 
+    public bool kitchenActive; 
 
-    //[SerializeField] public GameObject KitchenKeuze_1; 
-    //[SerializeField] public GameObject KitchenKeuze_2; 
-    //[SerializeField] public GameObject KitchenKeuze_3; 
-
-    //[SerializeField] public GameObject KitchenKeuze_1; 
-    //[SerializeField] public GameObject KitchenKeuze_2; 
-    //[SerializeField] public GameObject KitchenKeuze_3; 
-
-    //[SerializeField] public GameObject KitchenKeuze_1; 
-    //[SerializeField] public GameObject KitchenKeuze_2; 
-    //[SerializeField] public GameObject KitchenKeuze_3;
-
-    // bool kitchenActive; 
     void Start()
     {
         DontDestroyOnLoad(this); 
     }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(kitchenActive)
         {
             KitchenKeuze_1.gameObject.SetActive(true); 
         }
