@@ -23,7 +23,10 @@ public class PlayerScript : MonoBehaviour
 
     public bool active = true;
 
+    float dist;
+
     public GameObject TestPoint;
+    public UImanager UIMAN;
 
     public NavMeshAgent agent;
 
@@ -53,8 +56,6 @@ public class PlayerScript : MonoBehaviour
             }
         }
 
-        
-
         switch (Movement)
         {
             case RoomPos.BedroomEnum:
@@ -72,12 +73,10 @@ public class PlayerScript : MonoBehaviour
                     Movement = RoomPos.KitchenEnum;
                 }
                 float dist = Vector3.Distance(waypoints[1].transform.position, transform.position);
-                InteractableObjects interactableObjects = new InteractableObjects();
-                if (dist <= 1)
+                if (dist <= 2)
                 {
-                    interactableObjects.Keuze1.gameObject.SetActive(true);
-                    interactableObjects.Keuze2.gameObject.SetActive(true);
-                    interactableObjects.Keuze3.gameObject.SetActive(true);
+                    print("Tiddies");
+                    UIMAN.kitchenActive = true;
                 }
 
                 break;
@@ -87,6 +86,12 @@ public class PlayerScript : MonoBehaviour
                     agent.destination = waypoints[3].transform.position;
                     Movement = RoomPos.Garage;
                 }
+                dist = Vector3.Distance(waypoints[2].transform.position, transform.position);
+                if (dist <= 2)
+                {
+                    print("Tiddies");
+                    UIMAN.kitchenActive = true;
+                }
                 break;
             case RoomPos.Outside:
                 if (Input.GetKeyDown(KeyCode.A))
@@ -94,12 +99,24 @@ public class PlayerScript : MonoBehaviour
                     agent.destination = waypoints[0].transform.position;
                     Movement = RoomPos.BedroomEnum;
                 }
+                dist = Vector3.Distance(waypoints[4].transform.position, transform.position);
+                if (dist <= 2)
+                {
+                    print("Tiddies");
+                    UIMAN.kitchenActive = true;
+                }
                 break;
             case RoomPos.Garage:
                 if (Input.GetKeyDown(KeyCode.A))
                 {
                     agent.destination = waypoints[4].transform.position;
                     Movement = RoomPos.Outside;
+                }
+                dist = Vector3.Distance(waypoints[3].transform.position, transform.position);
+                if (dist <= 2)
+                {
+                    print("Tiddies");
+                    UIMAN.kitchenActive = true;
                 }
                 break;
         }
