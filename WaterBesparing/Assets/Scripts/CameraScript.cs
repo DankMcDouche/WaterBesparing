@@ -14,7 +14,7 @@ public class CameraScript : MonoBehaviour
 
     bool LeftRotation;
 
-    //PlayerScript player = new PlayerScript();
+    PlayerScript player = new PlayerScript();
 
 
     void Start()
@@ -41,6 +41,20 @@ public class CameraScript : MonoBehaviour
         {
             print("but now it doent");
             rooms = 2;
+            Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 0.1f);
+            Camera.main.transform.rotation = RoomPositions[rooms].transform.rotation;
+        }
+        else if (PlayerEnum == RoomPos.Garage)
+        {
+            print("but now it doent");
+            rooms = 3;
+            Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 0.1f);
+            Camera.main.transform.rotation = RoomPositions[rooms].transform.rotation;
+        }
+        else if (PlayerEnum == RoomPos.Outside)
+        {
+            print("but now it doent");
+            rooms = 4;
             Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 0.1f);
             Camera.main.transform.rotation = RoomPositions[rooms].transform.rotation;
         }
