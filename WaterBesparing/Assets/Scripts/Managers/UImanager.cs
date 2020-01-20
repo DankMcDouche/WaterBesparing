@@ -6,14 +6,14 @@ public class UImanager : MonoBehaviour
 {
 
     [SerializeField] public GameObject KitchenKeuze_1; 
-   // bool kitchenActive; 
+    public bool kitchenActive; 
     void Start()
     {
         DontDestroyOnLoad(this); 
     }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(kitchenActive)
         {
             KitchenKeuze_1.gameObject.SetActive(true); 
         }
