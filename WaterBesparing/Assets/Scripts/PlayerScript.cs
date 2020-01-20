@@ -21,23 +21,43 @@ public class PlayerScript : MonoBehaviour
 
     RoomPos Movement = RoomPos.BedroomEnum;
 
-    public bool active = true;
-
     float dist;
+
+    public Vector3 direction;
 
     public GameObject TestPoint;
     public UImanager UIMAN;
 
+    public Rigidbody _Rigidbody;
+
     public NavMeshAgent agent;
+    public Animator Anim;
 
     public void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-
+        Anim = GetComponent<Animator>();
     }
 
     void Update()
     {
+        direction = new Vector3(Input.GetAxis("Horizontal"), 0f, (Input.GetAxis("Vertical")));
+        direction.Normalize();
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            Anim.SetBool("walking", true);
+            print("if i pressa da b");
+        }
+
+        if (direction.magnitude <= 0.1)
+        {
+            Anim.SetBool("walking", false);
+        }
+        else 
+        {
+            Anim.SetBool("walking", true);
+        }
 
         if (Input.touchCount > 0)
         {
@@ -75,8 +95,8 @@ public class PlayerScript : MonoBehaviour
                 float dist = Vector3.Distance(waypoints[1].transform.position, transform.position);
                 if (dist <= 2)
                 {
-                    print("Tiddies");
-                    UIMAN.kitchenActive = true;
+                    
+                    
                 }
 
                 break;
@@ -90,7 +110,7 @@ public class PlayerScript : MonoBehaviour
                 if (dist <= 2)
                 {
                     print("Tiddies");
-                    UIMAN.kitchenActive = true;
+                    UIMAN.AfwasActive = true;
                 }
                 break;
             case RoomPos.Outside:

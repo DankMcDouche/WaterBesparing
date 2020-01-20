@@ -19,7 +19,7 @@ public class CameraScript : MonoBehaviour
 
     void Start()
     {
-        //Player = GameObject.Find("Player").GetComponent<PlayerScript>();
+        Player = GameObject.Find("Polly").GetComponent<PlayerScript>();
 
     }
     void Update()
@@ -32,28 +32,24 @@ public class CameraScript : MonoBehaviour
         }
         else if (PlayerEnum == RoomPos.BathroomEnum)
         {
-            print("but now it doent");
             rooms = 1;
             Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 0.05f);
             Camera.main.transform.rotation = RoomPositions[rooms].transform.rotation;
         }
         else if (PlayerEnum == RoomPos.KitchenEnum)
         {
-            print("but now it doent");
             rooms = 2;
             Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 0.1f);
             Camera.main.transform.rotation = RoomPositions[rooms].transform.rotation;
         }
         else if (PlayerEnum == RoomPos.Garage)
         {
-            print("but now it doent");
             rooms = 3;
             Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 0.1f);
             Camera.main.transform.rotation = RoomPositions[rooms].transform.rotation;
         }
         else if (PlayerEnum == RoomPos.Outside)
         {
-            print("but now it doent");
             rooms = 4;
             Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 0.1f);
             Camera.main.transform.rotation = RoomPositions[rooms].transform.rotation;
