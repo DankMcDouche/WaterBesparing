@@ -12,8 +12,6 @@ public class InteractableObjects : MonoBehaviour
     public Button Keuze3;
 
 
-     
-
     public void Start()
     {
        Keuze1.gameObject.SetActive(false);

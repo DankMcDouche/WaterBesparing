@@ -17,7 +17,7 @@ public class PlayerScript : MonoBehaviour
     public List<GameObject> waypoints;
     public int Destination = 0;
     public LayerMask touchInputMask;
-    InteractableObjects interactableObjects;
+    
 
     RoomPos Movement = RoomPos.BedroomEnum;
 
@@ -30,6 +30,7 @@ public class PlayerScript : MonoBehaviour
     public void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        
     }
 
     void Update()
@@ -71,6 +72,7 @@ public class PlayerScript : MonoBehaviour
                     Movement = RoomPos.KitchenEnum;
                 }
                 float dist = Vector3.Distance(waypoints[1].transform.position, transform.position);
+                InteractableObjects interactableObjects = new InteractableObjects();
                 if (dist <= 1)
                 {
                     interactableObjects.Keuze1.gameObject.SetActive(true);
