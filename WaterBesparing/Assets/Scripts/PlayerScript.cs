@@ -34,6 +34,7 @@ public class PlayerScript : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();;
         Movement = RoomPos.BedroomEnum;
+        print(Anim.GetBool("walking"));
     }
 
     void Update()
@@ -44,7 +45,9 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.B))
         {
             Anim.SetBool("walking", true);
-            print("if i pressa da b");
+            //print("if i pressa da b");
+
+            print(Anim.GetBool("walking"));
         }
 
         if (direction.magnitude <= 0.1)
