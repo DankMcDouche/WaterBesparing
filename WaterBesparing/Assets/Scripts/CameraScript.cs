@@ -23,15 +23,13 @@ public class CameraScript : MonoBehaviour
         {
             case RoomPos.BedroomEnum:
                 rooms = 0;
-                Camera.main.transform.position = RoomPositions[rooms].transform.position;
-                Camera.main.transform.rotation = RoomPositions[rooms].transform.rotation;
-                print("i see start enum");
+                Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 1 * Time.deltaTime);
+                Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, RoomPositions[rooms].transform.rotation, 1 * Time.deltaTime);
                 break;
             case RoomPos.BathroomEnum:
                 rooms = 1;
                 Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 1 * Time.deltaTime);
                 Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, RoomPositions[rooms].transform.rotation, 1 * Time.deltaTime);
-                print("it fucking worked!");
                 break;
             case RoomPos.KitchenEnum:
                 rooms = 2;
