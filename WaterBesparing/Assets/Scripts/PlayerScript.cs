@@ -32,8 +32,7 @@ public class PlayerScript : MonoBehaviour
 
     public void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-        Anim = GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();;
         Movement = RoomPos.BedroomEnum;
     }
 
