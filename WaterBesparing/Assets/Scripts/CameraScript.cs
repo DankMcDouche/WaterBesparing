@@ -12,49 +12,47 @@ public class CameraScript : MonoBehaviour
 
     public int rooms;
 
-    bool LeftRotation;
-
-    PlayerScript player = new PlayerScript();
-
-
     void Start()
     {
         Player = GameObject.Find("Polly").GetComponent<PlayerScript>();
-
+        PlayerEnum = Player.Movement;
     }
     void Update()
     {
-        if (PlayerEnum == RoomPos.BedroomEnum)
+        switch (Player.Movement)
         {
-            rooms = 0;
-            Camera.main.transform.position = RoomPositions[rooms].transform.position;
-            Camera.main.transform.rotation = RoomPositions[rooms].transform.rotation;
-        }
-        if (PlayerEnum == RoomPos.BathroomEnum)
-        {
-            rooms = 1;
-            Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 0.05f);
-            Camera.main.transform.rotation = RoomPositions[rooms].transform.rotation;
-        }
-        if (PlayerEnum == RoomPos.KitchenEnum)
-        {
-            rooms = 2;
-            Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 0.1f);
-            Camera.main.transform.rotation = RoomPositions[rooms].transform.rotation;
-        }
-        if (PlayerEnum == RoomPos.Garage)
-        {
-            rooms = 3;
-            Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 0.1f);
-            Camera.main.transform.rotation = RoomPositions[rooms].transform.rotation;
-        }
-        if (PlayerEnum == RoomPos.Outside)
-        {
-            rooms = 4;
-            Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 0.1f);
-            Camera.main.transform.rotation = RoomPositions[rooms].transform.rotation;
+            case RoomPos.BedroomEnum:
+                rooms = 0;
+                Camera.main.transform.position = RoomPositions[rooms].transform.position;
+                Camera.main.transform.rotation = RoomPositions[rooms].transform.rotation;
+                print("i see start enum");
+                break;
+            case RoomPos.BathroomEnum:
+                rooms = 1;
+                Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 1 * Time.deltaTime);
+                Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, RoomPositions[rooms].transform.rotation, 1 * Time.deltaTime);
+                print("it fucking worked!");
+                break;
+            case RoomPos.KitchenEnum:
+                rooms = 2;
+                Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 1 * Time.deltaTime);
+                Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, RoomPositions[rooms].transform.rotation, 1 * Time.deltaTime);
+
+                break;
+            case RoomPos.Garage:
+                rooms = 3;
+                Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 1 * Time.deltaTime);
+                Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, RoomPositions[rooms].transform.rotation, 1 * Time.deltaTime);
+
+                break;
+            case RoomPos.Outside:
+                rooms = 4;
+                Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 1 * Time.deltaTime);
+                Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, RoomPositions[rooms].transform.rotation, 1 * Time.deltaTime);
+                break;
         }
 
+        
     }
 
 }

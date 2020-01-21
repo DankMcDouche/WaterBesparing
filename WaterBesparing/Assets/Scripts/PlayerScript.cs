@@ -18,8 +18,7 @@ public class PlayerScript : MonoBehaviour
     public int Destination = 0;
     public LayerMask touchInputMask;
 
-
-    RoomPos Movement = RoomPos.BedroomEnum;
+    public RoomPos Movement;
 
     float dist;
 
@@ -27,9 +26,7 @@ public class PlayerScript : MonoBehaviour
 
     public GameObject TestPoint;
     public UImanager UIMAN;
-
     public Rigidbody _Rigidbody;
-
     public NavMeshAgent agent;
     public Animator Anim;
 
@@ -37,6 +34,7 @@ public class PlayerScript : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         Anim = GetComponent<Animator>();
+        Movement = RoomPos.BedroomEnum;
     }
 
     void Update()
@@ -59,22 +57,24 @@ public class PlayerScript : MonoBehaviour
             Anim.SetBool("walking", true);
         }
 
-        if (Input.touchCount > 0)
-        {
-            foreach (Touch touch in Input.touches)
-            {
-                Ray ray = Camera.main.ScreenPointToRay(touch.position);
-                RaycastHit Hit;
-                if (Physics.Raycast(ray, out Hit, touchInputMask))
-                {
-                    GameObject recipient = Hit.transform.gameObject;
-                    if (touch.phase == TouchPhase.Began)
-                    {
-                        recipient.SendMessage("OnTouchDown", Hit.point, SendMessageOptions.DontRequireReceiver);
-                    }
-                }
-            }
-        }
+        // this is touching gameobjects (Input)
+
+        //if (Input.touchCount > 0)
+        //{
+        //    foreach (Touch touch in Input.touches)
+        //    {
+        //        Ray ray = Camera.main.ScreenPointToRay(touch.position);
+        //        RaycastHit Hit;
+        //        if (Physics.Raycast(ray, out Hit, touchInputMask))
+        //        {
+        //            GameObject recipient = Hit.transform.gameObject;
+        //            if (touch.phase == TouchPhase.Began)
+        //            {
+        //                recipient.SendMessage("OnTouchDown", Hit.point, SendMessageOptions.DontRequireReceiver);
+        //            }
+        //        }
+        //    }
+        //}
 
         switch (Movement)
         {
@@ -96,7 +96,6 @@ public class PlayerScript : MonoBehaviour
                 if (dist <= 2)
                 {
                     
-                    
                 }
 
                 break;
@@ -109,7 +108,6 @@ public class PlayerScript : MonoBehaviour
                 dist = Vector3.Distance(waypoints[2].transform.position, transform.position);
                 if (dist <= 2)
                 {
-                    print("Tiddies");
                     UIMAN.AfwasActive = true;
                 }
                 break;
@@ -122,7 +120,6 @@ public class PlayerScript : MonoBehaviour
                 dist = Vector3.Distance(waypoints[4].transform.position, transform.position);
                 if (dist <= 2)
                 {
-                    print("Tiddies");
                     UIMAN.PlantenWaterenActive = true;
                 }
                 break;
@@ -135,7 +132,6 @@ public class PlayerScript : MonoBehaviour
                 dist = Vector3.Distance(waypoints[3].transform.position, transform.position);
                 if (dist <= 2)
                 {
-                    print("Tiddies");
                     //UIMAN.Active = true;
                 }
                 break;
