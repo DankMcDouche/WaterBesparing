@@ -103,12 +103,12 @@ public class PlayerScript : MonoBehaviour
                 {
                     UIMAN.OpschonenActive = true;
                     dist = Vector3.Distance(waypoints[1].transform.position, transform.position);
-                    if (dist <= 1 && UIMAN.OpschonenActive == false)
+                    if (dist <= 1 )
                     {
                         UIMAN.OpschonenActive = true;
                     }
 
-                    if (UIMAN.OpschonenActive == false)
+                    if (UIMAN.OpschonenActive == false)   /// me xfixoa the sdis
                     {
                         agent.destination = waypoints[2].transform.position;
                         shower = false;
