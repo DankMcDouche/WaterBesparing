@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
 public enum RoomPos
 {
     BedroomEnum,
@@ -11,12 +10,12 @@ public enum RoomPos
     Outside,
     Garage
 }
-
 public class PlayerScript : MonoBehaviour
 {
+    public LayerMask touchInputMask;
+
     public List<GameObject> waypoints;
     public int Destination = 0;
-    public LayerMask touchInputMask;
 
     public RoomPos Movement;
 
@@ -42,7 +41,8 @@ public class PlayerScript : MonoBehaviour
 
     public void Start()
     {
-        agent = GetComponent<NavMeshAgent>();;
+        agent = GetComponent<NavMeshAgent>();
+
         Movement = RoomPos.BedroomEnum;
         shower = false;
         toilet = false;
@@ -203,7 +203,6 @@ public class PlayerScript : MonoBehaviour
                         UIMAN.PlantenWaterenActive = true;
                     }
                 }
-
                 break;
         }
     }

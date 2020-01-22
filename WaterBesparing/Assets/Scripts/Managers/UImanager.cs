@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class UImanager : MonoBehaviour
 {
-
-
     [SerializeField] public GameObject AfwasKeuze_1;
     [SerializeField] public GameObject AfwasKeuze_2;
     [SerializeField] public GameObject AfwasKeuze_3;
@@ -32,36 +30,9 @@ public class UImanager : MonoBehaviour
     public bool WasmachineActive;
     public bool OpschonenActive;
 
-
     void Start()
     {
         DontDestroyOnLoad(this);
-        //AfwasKeuze_1.gameObject.SetActive(false);
-        //AfwasKeuze_2.gameObject.SetActive(false);
-        //AfwasKeuze_3.gameObject.SetActive(false);
-
-        //ToiletKeuze_1.gameObject.SetActive(false);
-        //ToiletKeuze_2.gameObject.SetActive(false);
-        //ToiletKeuze_3.gameObject.SetActive(false);
-
-        //OpschonenKeuze_1.gameObject.SetActive(false);
-        //OpschonenKeuze_2.gameObject.SetActive(false);
-        //OpschonenKeuze_3.gameObject.SetActive(false);
-
-        //WasmachineKeuze_1.gameObject.SetActive(false);
-        //WasmachineKeuze_2.gameObject.SetActive(false);
-        //WasmachineKeuze_3.gameObject.SetActive(false);
-
-        //PlantenWaterenKeuze_1.gameObject.SetActive(false);
-        //PlantenWaterenKeuze_2.gameObject.SetActive(false);
-        //PlantenWaterenKeuze_3.gameObject.SetActive(false);
-
-        //OpschonenF = false;
-        //ToiletF = false;
-        //WasF = false;
-        //VaatF = false;
-        //PlantF = false;
-
     }
     void Update()
     {
@@ -72,38 +43,48 @@ public class UImanager : MonoBehaviour
             OpschonenKeuze_1.SetActive(true);
             OpschonenKeuze_2.SetActive(true);
             OpschonenKeuze_3.SetActive(true);
+            print("OpschonenActive true");
+
         }
         else if (OpschonenActive == false)
         {
             OpschonenKeuze_1.gameObject.SetActive(false);
             OpschonenKeuze_2.gameObject.SetActive(false);
             OpschonenKeuze_3.gameObject.SetActive(false);
-            print("Shower gaat uit");
+            print("OpschonenActive false");
+
         }
         if (ToiletActive)
         {
-
             ToiletKeuze_1.SetActive(true);
             ToiletKeuze_2.SetActive(true);
             ToiletKeuze_3.SetActive(true);
+            print("ToiletActive true");
+
         }
-        else
+        else if(ToiletActive == false)
         {
             ToiletKeuze_1.gameObject.SetActive(false);
             ToiletKeuze_2.gameObject.SetActive(false);
             ToiletKeuze_3.gameObject.SetActive(false);
+            print("ToiletActive false");
+
         }
         if (WasmachineActive)
         {
             WasmachineKeuze_1.SetActive(true);
             WasmachineKeuze_2.SetActive(true);
             WasmachineKeuze_3.SetActive(true);
+            print("WasmachineActive true");
+
         }
-        else
+        else if (WasmachineActive == false)
         {
             WasmachineKeuze_1.gameObject.SetActive(false);
             WasmachineKeuze_2.gameObject.SetActive(false);
             WasmachineKeuze_3.gameObject.SetActive(false);
+            print("WasmachineActive false");
+
         }
         if (AfwasActive)
         {
@@ -111,12 +92,15 @@ public class UImanager : MonoBehaviour
             AfwasKeuze_1.SetActive(true);
             AfwasKeuze_2.SetActive(true);
             AfwasKeuze_3.SetActive(true);
+            print("AfwasActive true");
+
         }
-        else
+        else if (AfwasActive == false)
         {
             AfwasKeuze_1.gameObject.SetActive(false);
             AfwasKeuze_2.gameObject.SetActive(false);
             AfwasKeuze_3.gameObject.SetActive(false);
+            print("AfwasActive false");
 
         }
         if (PlantenWaterenActive)
@@ -125,12 +109,14 @@ public class UImanager : MonoBehaviour
             PlantenWaterenKeuze_1.SetActive(true);
             PlantenWaterenKeuze_2.SetActive(true);
             PlantenWaterenKeuze_3.SetActive(true);
+            print("PlantenWaterenActive true");
         }
-        else
+        else if (PlantenWaterenActive == false)
         {
             PlantenWaterenKeuze_1.gameObject.SetActive(false);
             PlantenWaterenKeuze_2.gameObject.SetActive(false);
             PlantenWaterenKeuze_3.gameObject.SetActive(false);
+            print("PlantenWaterenActive false");
         }
     }
 
