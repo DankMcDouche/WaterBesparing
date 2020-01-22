@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI; 
 public class InteractableObjects : MonoBehaviour
 {
+    UImanager UIman;
+
     public Image waterSlider;
     public int Water;
                   
@@ -24,43 +26,41 @@ public class InteractableObjects : MonoBehaviour
     public Button PlantenWaterenKeuze_3;
     public void Start()
     {
-        AfwasKeuze_1.gameObject.SetActive(false);
-        AfwasKeuze_2.gameObject.SetActive(false);
-        AfwasKeuze_3.gameObject.SetActive(false);
-
-        ToiletKeuze_1.gameObject.SetActive(false);
-        ToiletKeuze_2.gameObject.SetActive(false);
-        ToiletKeuze_3.gameObject.SetActive(false);
-
-        OpschonenKeuze_1.gameObject.SetActive(false);
-        OpschonenKeuze_2.gameObject.SetActive(false);
-        OpschonenKeuze_3.gameObject.SetActive(false);
-
-        WasmachineKeuze_1.gameObject.SetActive(false);
-        WasmachineKeuze_2.gameObject.SetActive(false);
-        WasmachineKeuze_3.gameObject.SetActive(false);
-
-        PlantenWaterenKeuze_1.gameObject.SetActive(false);
-        PlantenWaterenKeuze_2.gameObject.SetActive(false);
-        PlantenWaterenKeuze_3.gameObject.SetActive(false);
+       
     }
    
     public void AddWater()
     {
-       
-            if (Keuze1 == true)
-            {
-                waterSlider.fillAmount += 0.15f;
-            }
-            if (Keuze2 == true)
-            {
-                waterSlider.fillAmount += 0.1f;
-            }
-            if (Keuze3 == true)
-            {
-                waterSlider.fillAmount += 0.05f;
-            }
+
+        if (OpschonenKeuze_1 == true)
+        {
+            waterSlider.fillAmount += 0.15f;
+            UIman.OpschonenActive = false; 
         }
+        if (OpschonenKeuze_2 == true)
+        {
+            waterSlider.fillAmount += 0.1f;
+            UIman.OpschonenActive = false;
+        }
+        if (OpschonenKeuze_3 == true)
+        {
+            waterSlider.fillAmount += 0.05f;
+            UIman.OpschonenActive = false;
+        }
+
+        //    if (AfwasKeuze_1 == true)
+        //    {
+        //        waterSlider.fillAmount += 0.15f;
+        //    }
+        //    if (AfwasKeuze_2 == true)
+        //    {
+        //        waterSlider.fillAmount += 0.1f;
+        //    }
+        //    if (AfwasKeuze_3 == true)
+        //    {
+        //        waterSlider.fillAmount += 0.05f;
+        //    }
+    }
         
 
 }

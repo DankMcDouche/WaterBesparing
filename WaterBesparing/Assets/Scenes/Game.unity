@@ -264,9 +264,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterSlider: {fileID: 1203802361418162857}
   Water: 0
-  Keuze1: {fileID: 1423644644}
-  Keuze2: {fileID: 51327038}
-  Keuze3: {fileID: 204573008}
+  AfwasKeuze_1: {fileID: 591815203}
+  AfwasKeuze_2: {fileID: 1389098823}
+  AfwasKeuze_3: {fileID: 918155245}
+  ToiletKeuze_1: {fileID: 645870260}
+  ToiletKeuze_2: {fileID: 1177207004}
+  ToiletKeuze_3: {fileID: 1817043531}
+  OpschonenKeuze_1: {fileID: 1423644644}
+  OpschonenKeuze_2: {fileID: 51327038}
+  OpschonenKeuze_3: {fileID: 204573008}
+  WasmachineKeuze_1: {fileID: 896058108}
+  WasmachineKeuze_2: {fileID: 1003795620}
+  WasmachineKeuze_3: {fileID: 670961886}
+  PlantenWaterenKeuze_1: {fileID: 65501295}
+  PlantenWaterenKeuze_2: {fileID: 2069971961}
+  PlantenWaterenKeuze_3: {fileID: 1797766778}
 --- !u!1 &65501294
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,9 +367,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterSlider: {fileID: 1203802361418162857}
   Water: 0
-  Keuze1: {fileID: 65501295}
-  Keuze2: {fileID: 2069971961}
-  Keuze3: {fileID: 1797766778}
+  AfwasKeuze_1: {fileID: 591815203}
+  AfwasKeuze_2: {fileID: 1389098823}
+  AfwasKeuze_3: {fileID: 918155245}
+  ToiletKeuze_1: {fileID: 645870260}
+  ToiletKeuze_2: {fileID: 1177207004}
+  ToiletKeuze_3: {fileID: 1817043531}
+  OpschonenKeuze_1: {fileID: 1423644644}
+  OpschonenKeuze_2: {fileID: 51327038}
+  OpschonenKeuze_3: {fileID: 204573008}
+  WasmachineKeuze_1: {fileID: 896058108}
+  WasmachineKeuze_2: {fileID: 1003795620}
+  WasmachineKeuze_3: {fileID: 670961886}
+  PlantenWaterenKeuze_1: {fileID: 65501295}
+  PlantenWaterenKeuze_2: {fileID: 2069971961}
+  PlantenWaterenKeuze_3: {fileID: 1797766778}
 --- !u!114 &65501297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -586,9 +610,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterSlider: {fileID: 1203802361418162857}
   Water: 0
-  Keuze1: {fileID: 1423644644}
-  Keuze2: {fileID: 0}
-  Keuze3: {fileID: 204573008}
+  AfwasKeuze_1: {fileID: 591815203}
+  AfwasKeuze_2: {fileID: 1389098823}
+  AfwasKeuze_3: {fileID: 918155245}
+  ToiletKeuze_1: {fileID: 645870260}
+  ToiletKeuze_2: {fileID: 1177207004}
+  ToiletKeuze_3: {fileID: 1817043531}
+  OpschonenKeuze_1: {fileID: 1423644644}
+  OpschonenKeuze_2: {fileID: 51327038}
+  OpschonenKeuze_3: {fileID: 204573008}
+  WasmachineKeuze_1: {fileID: 896058108}
+  WasmachineKeuze_2: {fileID: 1003795620}
+  WasmachineKeuze_3: {fileID: 670961886}
+  PlantenWaterenKeuze_1: {fileID: 65501295}
+  PlantenWaterenKeuze_2: {fileID: 2069971961}
+  PlantenWaterenKeuze_3: {fileID: 1797766778}
 --- !u!1 &385012892
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,9 +1273,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterSlider: {fileID: 1203802361418162857}
   Water: 0
-  Keuze1: {fileID: 591815203}
-  Keuze2: {fileID: 1389098823}
-  Keuze3: {fileID: 918155245}
+  AfwasKeuze_1: {fileID: 591815203}
+  AfwasKeuze_2: {fileID: 1389098823}
+  AfwasKeuze_3: {fileID: 918155245}
+  ToiletKeuze_1: {fileID: 645870260}
+  ToiletKeuze_2: {fileID: 1177207004}
+  ToiletKeuze_3: {fileID: 1817043531}
+  OpschonenKeuze_1: {fileID: 1423644644}
+  OpschonenKeuze_2: {fileID: 51327038}
+  OpschonenKeuze_3: {fileID: 204573008}
+  WasmachineKeuze_1: {fileID: 896058108}
+  WasmachineKeuze_2: {fileID: 1003795620}
+  WasmachineKeuze_3: {fileID: 670961886}
+  PlantenWaterenKeuze_1: {fileID: 65501295}
+  PlantenWaterenKeuze_2: {fileID: 2069971961}
+  PlantenWaterenKeuze_3: {fileID: 1797766778}
 --- !u!114 &591815205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1383,9 +1431,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterSlider: {fileID: 1203802361418162857}
   Water: 0
-  Keuze1: {fileID: 645870260}
-  Keuze2: {fileID: 1177207004}
-  Keuze3: {fileID: 1817043531}
+  AfwasKeuze_1: {fileID: 591815203}
+  AfwasKeuze_2: {fileID: 1389098823}
+  AfwasKeuze_3: {fileID: 918155245}
+  ToiletKeuze_1: {fileID: 645870260}
+  ToiletKeuze_2: {fileID: 1177207004}
+  ToiletKeuze_3: {fileID: 1817043531}
+  OpschonenKeuze_1: {fileID: 1423644644}
+  OpschonenKeuze_2: {fileID: 51327038}
+  OpschonenKeuze_3: {fileID: 204573008}
+  WasmachineKeuze_1: {fileID: 896058108}
+  WasmachineKeuze_2: {fileID: 1003795620}
+  WasmachineKeuze_3: {fileID: 670961886}
+  PlantenWaterenKeuze_1: {fileID: 65501295}
+  PlantenWaterenKeuze_2: {fileID: 2069971961}
+  PlantenWaterenKeuze_3: {fileID: 1797766778}
 --- !u!114 &645870262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1475,9 +1535,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterSlider: {fileID: 1203802361418162857}
   Water: 0
-  Keuze1: {fileID: 896058108}
-  Keuze2: {fileID: 1003795620}
-  Keuze3: {fileID: 670961886}
+  AfwasKeuze_1: {fileID: 591815203}
+  AfwasKeuze_2: {fileID: 1389098823}
+  AfwasKeuze_3: {fileID: 918155245}
+  ToiletKeuze_1: {fileID: 645870260}
+  ToiletKeuze_2: {fileID: 1177207004}
+  ToiletKeuze_3: {fileID: 1817043531}
+  OpschonenKeuze_1: {fileID: 1423644644}
+  OpschonenKeuze_2: {fileID: 51327038}
+  OpschonenKeuze_3: {fileID: 204573008}
+  WasmachineKeuze_1: {fileID: 896058108}
+  WasmachineKeuze_2: {fileID: 1003795620}
+  WasmachineKeuze_3: {fileID: 670961886}
+  PlantenWaterenKeuze_1: {fileID: 65501295}
+  PlantenWaterenKeuze_2: {fileID: 2069971961}
+  PlantenWaterenKeuze_3: {fileID: 1797766778}
 --- !u!114 &670961886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1675,9 +1747,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterSlider: {fileID: 1203802361418162857}
   Water: 0
-  Keuze1: {fileID: 896058108}
-  Keuze2: {fileID: 1003795620}
-  Keuze3: {fileID: 670961886}
+  AfwasKeuze_1: {fileID: 591815203}
+  AfwasKeuze_2: {fileID: 1389098823}
+  AfwasKeuze_3: {fileID: 918155245}
+  ToiletKeuze_1: {fileID: 645870260}
+  ToiletKeuze_2: {fileID: 1177207004}
+  ToiletKeuze_3: {fileID: 1817043531}
+  OpschonenKeuze_1: {fileID: 1423644644}
+  OpschonenKeuze_2: {fileID: 51327038}
+  OpschonenKeuze_3: {fileID: 204573008}
+  WasmachineKeuze_1: {fileID: 896058108}
+  WasmachineKeuze_2: {fileID: 1003795620}
+  WasmachineKeuze_3: {fileID: 670961886}
+  PlantenWaterenKeuze_1: {fileID: 65501295}
+  PlantenWaterenKeuze_2: {fileID: 2069971961}
+  PlantenWaterenKeuze_3: {fileID: 1797766778}
 --- !u!114 &896058110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1767,9 +1851,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterSlider: {fileID: 1203802361418162857}
   Water: 0
-  Keuze1: {fileID: 591815203}
-  Keuze2: {fileID: 1389098823}
-  Keuze3: {fileID: 918155245}
+  AfwasKeuze_1: {fileID: 591815203}
+  AfwasKeuze_2: {fileID: 1389098823}
+  AfwasKeuze_3: {fileID: 918155245}
+  ToiletKeuze_1: {fileID: 645870260}
+  ToiletKeuze_2: {fileID: 1177207004}
+  ToiletKeuze_3: {fileID: 1817043531}
+  OpschonenKeuze_1: {fileID: 1423644644}
+  OpschonenKeuze_2: {fileID: 51327038}
+  OpschonenKeuze_3: {fileID: 204573008}
+  WasmachineKeuze_1: {fileID: 896058108}
+  WasmachineKeuze_2: {fileID: 1003795620}
+  WasmachineKeuze_3: {fileID: 670961886}
+  PlantenWaterenKeuze_1: {fileID: 65501295}
+  PlantenWaterenKeuze_2: {fileID: 2069971961}
+  PlantenWaterenKeuze_3: {fileID: 1797766778}
 --- !u!114 &918155245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1967,9 +2063,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterSlider: {fileID: 1203802361418162857}
   Water: 0
-  Keuze1: {fileID: 896058108}
-  Keuze2: {fileID: 1003795620}
-  Keuze3: {fileID: 670961886}
+  AfwasKeuze_1: {fileID: 591815203}
+  AfwasKeuze_2: {fileID: 1389098823}
+  AfwasKeuze_3: {fileID: 918155245}
+  ToiletKeuze_1: {fileID: 645870260}
+  ToiletKeuze_2: {fileID: 1177207004}
+  ToiletKeuze_3: {fileID: 1817043531}
+  OpschonenKeuze_1: {fileID: 1423644644}
+  OpschonenKeuze_2: {fileID: 51327038}
+  OpschonenKeuze_3: {fileID: 204573008}
+  WasmachineKeuze_1: {fileID: 896058108}
+  WasmachineKeuze_2: {fileID: 1003795620}
+  WasmachineKeuze_3: {fileID: 670961886}
+  PlantenWaterenKeuze_1: {fileID: 65501295}
+  PlantenWaterenKeuze_2: {fileID: 2069971961}
+  PlantenWaterenKeuze_3: {fileID: 1797766778}
 --- !u!114 &1003795622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2113,9 +2221,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterSlider: {fileID: 1203802361418162857}
   Water: 0
-  Keuze1: {fileID: 645870260}
-  Keuze2: {fileID: 1177207004}
-  Keuze3: {fileID: 1817043531}
+  AfwasKeuze_1: {fileID: 591815203}
+  AfwasKeuze_2: {fileID: 1389098823}
+  AfwasKeuze_3: {fileID: 918155245}
+  ToiletKeuze_1: {fileID: 645870260}
+  ToiletKeuze_2: {fileID: 1177207004}
+  ToiletKeuze_3: {fileID: 1817043531}
+  OpschonenKeuze_1: {fileID: 1423644644}
+  OpschonenKeuze_2: {fileID: 51327038}
+  OpschonenKeuze_3: {fileID: 204573008}
+  WasmachineKeuze_1: {fileID: 896058108}
+  WasmachineKeuze_2: {fileID: 1003795620}
+  WasmachineKeuze_3: {fileID: 670961886}
+  PlantenWaterenKeuze_1: {fileID: 65501295}
+  PlantenWaterenKeuze_2: {fileID: 2069971961}
+  PlantenWaterenKeuze_3: {fileID: 1797766778}
 --- !u!114 &1177207006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2447,9 +2567,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterSlider: {fileID: 1203802361418162857}
   Water: 0
-  Keuze1: {fileID: 591815203}
-  Keuze2: {fileID: 1389098823}
-  Keuze3: {fileID: 918155245}
+  AfwasKeuze_1: {fileID: 591815203}
+  AfwasKeuze_2: {fileID: 1389098823}
+  AfwasKeuze_3: {fileID: 918155245}
+  ToiletKeuze_1: {fileID: 645870260}
+  ToiletKeuze_2: {fileID: 1177207004}
+  ToiletKeuze_3: {fileID: 1817043531}
+  OpschonenKeuze_1: {fileID: 1423644644}
+  OpschonenKeuze_2: {fileID: 51327038}
+  OpschonenKeuze_3: {fileID: 204573008}
+  WasmachineKeuze_1: {fileID: 896058108}
+  WasmachineKeuze_2: {fileID: 1003795620}
+  WasmachineKeuze_3: {fileID: 670961886}
+  PlantenWaterenKeuze_1: {fileID: 65501295}
+  PlantenWaterenKeuze_2: {fileID: 2069971961}
+  PlantenWaterenKeuze_3: {fileID: 1797766778}
 --- !u!114 &1389098825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2664,9 +2796,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterSlider: {fileID: 1203802361418162857}
   Water: 0
-  Keuze1: {fileID: 1423644644}
-  Keuze2: {fileID: 0}
-  Keuze3: {fileID: 0}
+  AfwasKeuze_1: {fileID: 591815203}
+  AfwasKeuze_2: {fileID: 1389098823}
+  AfwasKeuze_3: {fileID: 918155245}
+  ToiletKeuze_1: {fileID: 645870260}
+  ToiletKeuze_2: {fileID: 1177207004}
+  ToiletKeuze_3: {fileID: 1817043531}
+  OpschonenKeuze_1: {fileID: 1423644644}
+  OpschonenKeuze_2: {fileID: 51327038}
+  OpschonenKeuze_3: {fileID: 204573008}
+  WasmachineKeuze_1: {fileID: 896058108}
+  WasmachineKeuze_2: {fileID: 1003795620}
+  WasmachineKeuze_3: {fileID: 670961886}
+  PlantenWaterenKeuze_1: {fileID: 65501295}
+  PlantenWaterenKeuze_2: {fileID: 2069971961}
+  PlantenWaterenKeuze_3: {fileID: 1797766778}
 --- !u!1 &1446856772
 GameObject:
   m_ObjectHideFlags: 0
@@ -3208,9 +3352,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterSlider: {fileID: 1203802361418162857}
   Water: 0
-  Keuze1: {fileID: 65501295}
-  Keuze2: {fileID: 2069971961}
-  Keuze3: {fileID: 1797766778}
+  AfwasKeuze_1: {fileID: 591815203}
+  AfwasKeuze_2: {fileID: 1389098823}
+  AfwasKeuze_3: {fileID: 918155245}
+  ToiletKeuze_1: {fileID: 645870260}
+  ToiletKeuze_2: {fileID: 1177207004}
+  ToiletKeuze_3: {fileID: 1817043531}
+  OpschonenKeuze_1: {fileID: 1423644644}
+  OpschonenKeuze_2: {fileID: 51327038}
+  OpschonenKeuze_3: {fileID: 204573008}
+  WasmachineKeuze_1: {fileID: 896058108}
+  WasmachineKeuze_2: {fileID: 1003795620}
+  WasmachineKeuze_3: {fileID: 670961886}
+  PlantenWaterenKeuze_1: {fileID: 65501295}
+  PlantenWaterenKeuze_2: {fileID: 2069971961}
+  PlantenWaterenKeuze_3: {fileID: 1797766778}
 --- !u!114 &1797766778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3373,9 +3529,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterSlider: {fileID: 1203802361418162857}
   Water: 0
-  Keuze1: {fileID: 645870260}
-  Keuze2: {fileID: 1177207004}
-  Keuze3: {fileID: 1817043531}
+  AfwasKeuze_1: {fileID: 591815203}
+  AfwasKeuze_2: {fileID: 1389098823}
+  AfwasKeuze_3: {fileID: 918155245}
+  ToiletKeuze_1: {fileID: 645870260}
+  ToiletKeuze_2: {fileID: 1177207004}
+  ToiletKeuze_3: {fileID: 1817043531}
+  OpschonenKeuze_1: {fileID: 1423644644}
+  OpschonenKeuze_2: {fileID: 51327038}
+  OpschonenKeuze_3: {fileID: 204573008}
+  WasmachineKeuze_1: {fileID: 896058108}
+  WasmachineKeuze_2: {fileID: 1003795620}
+  WasmachineKeuze_3: {fileID: 670961886}
+  PlantenWaterenKeuze_1: {fileID: 65501295}
+  PlantenWaterenKeuze_2: {fileID: 2069971961}
+  PlantenWaterenKeuze_3: {fileID: 1797766778}
 --- !u!114 &1817043531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3741,9 +3909,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterSlider: {fileID: 1203802361418162857}
   Water: 0
-  Keuze1: {fileID: 65501295}
-  Keuze2: {fileID: 2069971961}
-  Keuze3: {fileID: 1797766778}
+  AfwasKeuze_1: {fileID: 591815203}
+  AfwasKeuze_2: {fileID: 1389098823}
+  AfwasKeuze_3: {fileID: 918155245}
+  ToiletKeuze_1: {fileID: 645870260}
+  ToiletKeuze_2: {fileID: 1177207004}
+  ToiletKeuze_3: {fileID: 1817043531}
+  OpschonenKeuze_1: {fileID: 1423644644}
+  OpschonenKeuze_2: {fileID: 51327038}
+  OpschonenKeuze_3: {fileID: 204573008}
+  WasmachineKeuze_1: {fileID: 896058108}
+  WasmachineKeuze_2: {fileID: 1003795620}
+  WasmachineKeuze_3: {fileID: 670961886}
+  PlantenWaterenKeuze_1: {fileID: 65501295}
+  PlantenWaterenKeuze_2: {fileID: 2069971961}
+  PlantenWaterenKeuze_3: {fileID: 1797766778}
 --- !u!114 &2069971963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4712,14 +4892,14 @@ RectTransform:
   m_GameObject: {fileID: 1203802361418162859}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.12874272, y: 0.6125879, z: 0.22255}
+  m_LocalScale: {x: 0.12874272, y: 0.62827015, z: 0.22255}
   m_Children: []
   m_Father: {fileID: 1203802361755215748}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 23.3, y: -3.6}
+  m_AnchoredPosition: {x: 24.3, y: -3.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1203802361418162857

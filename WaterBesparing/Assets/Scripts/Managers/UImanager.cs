@@ -35,6 +35,25 @@ public class UImanager : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(this);
+        //AfwasKeuze_1.gameObject.SetActive(false);
+        //AfwasKeuze_2.gameObject.SetActive(false);
+        //AfwasKeuze_3.gameObject.SetActive(false);
+
+        //ToiletKeuze_1.gameObject.SetActive(false);
+        //ToiletKeuze_2.gameObject.SetActive(false);
+        //ToiletKeuze_3.gameObject.SetActive(false);
+
+        //OpschonenKeuze_1.gameObject.SetActive(false);
+        //OpschonenKeuze_2.gameObject.SetActive(false);
+        //OpschonenKeuze_3.gameObject.SetActive(false);
+
+        //WasmachineKeuze_1.gameObject.SetActive(false);
+        //WasmachineKeuze_2.gameObject.SetActive(false);
+        //WasmachineKeuze_3.gameObject.SetActive(false);
+
+        //PlantenWaterenKeuze_1.gameObject.SetActive(false);
+        //PlantenWaterenKeuze_2.gameObject.SetActive(false);
+        //PlantenWaterenKeuze_3.gameObject.SetActive(false);
     }
     void Update()
     {
