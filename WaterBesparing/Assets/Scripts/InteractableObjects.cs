@@ -24,29 +24,35 @@ public class InteractableObjects : MonoBehaviour
     public Button PlantenWaterenKeuze_1;
     public Button PlantenWaterenKeuze_2;
     public Button PlantenWaterenKeuze_3;
+
+
+
     public void Start()
     {
-       
+        UIman = GameObject.Find("UIManager").GetComponent<UImanager>();
+
     }
    
     public void AddWater()
     {
-
         if (OpschonenKeuze_1 == true)
         {
-            waterSlider.fillAmount += 0.15f;
-            UIman.OpschonenActive = false; 
-        }
-        if (OpschonenKeuze_2 == true)
-        {
-            waterSlider.fillAmount += 0.1f;
-            UIman.OpschonenActive = false;
-        }
-        if (OpschonenKeuze_3 == true)
-        {
-            waterSlider.fillAmount += 0.05f;
-            UIman.OpschonenActive = false;
-        }
+            print("i press button");
+             waterSlider.fillAmount += 0.15f;
+             UIman.OpschonenActive = false;
+         }
+         if (OpschonenKeuze_2 == true)
+         {
+             waterSlider.fillAmount += 0.1f;
+             UIman.OpschonenActive = false;
+         }
+         if (OpschonenKeuze_3 == true)
+         {
+             waterSlider.fillAmount += 0.05f;
+             UIman.OpschonenActive = false;
+         }
+
+        
 //----------------------------------------------------
         if (ToiletKeuze_1 == true)
         {
@@ -105,6 +111,7 @@ public class InteractableObjects : MonoBehaviour
         {
             waterSlider.fillAmount += 0.1f;
             UIman.OpschonenActive = false;
+
         }
         if (PlantenWaterenKeuze_3 == true)
         {

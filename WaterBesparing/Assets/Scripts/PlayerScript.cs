@@ -101,17 +101,14 @@ public class PlayerScript : MonoBehaviour
 
                 if (shower == true)
                 {
+                    UIMAN.OpschonenActive = true;
                     dist = Vector3.Distance(waypoints[1].transform.position, transform.position);
-                    if (dist <= 1)
+                    if (dist <= 1 && UIMAN.OpschonenActive == false)
                     {
                         UIMAN.OpschonenActive = true;
-                        print("distCheck 1 ok");
                     }
-                    else
-                    {
-                        UIMAN.OpschonenActive = false;
-                    }
-                    if (Input.GetKeyDown(KeyCode.A))
+
+                    if (UIMAN.OpschonenActive == false)
                     {
                         agent.destination = waypoints[2].transform.position;
                         shower = false;
@@ -126,16 +123,14 @@ public class PlayerScript : MonoBehaviour
                     {
                         UIMAN.ToiletActive = true;
                     }
-                    else
+                    else if (UIMAN.ToiletActive == false)
                     {
                         UIMAN.ToiletActive = false;
-                    }
-                    if (Input.GetKeyDown(KeyCode.A))
-                    {
                         agent.destination = waypoints[3].transform.position;
                         toilet = false;
                         washingmachine = true;
                     }
+
 
                 }
                 else if (washingmachine == true)
@@ -145,52 +140,44 @@ public class PlayerScript : MonoBehaviour
                     {
                         UIMAN.WasmachineActive = true;
                     }
-                    else
+                    else if (UIMAN.WasmachineActive == false)
                     {
                         UIMAN.WasmachineActive = false;
-                    }
-                    if (Input.GetKeyDown(KeyCode.A))
-                    {
                         agent.destination = waypoints[4].transform.position;
                         Movement = RoomPos.KitchenEnum;
                         washingmachine = false;
                     }
 
                 }
-                
 
                 break;
             case RoomPos.KitchenEnum:
-                if (Input.GetKeyDown(KeyCode.A))
-                {
-                    agent.destination = waypoints[5].transform.position;
-                    Movement = RoomPos.Garage;
-                }
+                
                 dist = Vector3.Distance(waypoints[4].transform.position, transform.position);
                 if (dist <= 1)
                 {
                     UIMAN.AfwasActive = true;
                 }
-                else
+                else if (UIMAN.AfwasActive == false)
                 {
                     UIMAN.AfwasActive = false;
+                    agent.destination = waypoints[5].transform.position;
+                    Movement = RoomPos.Outside;
                 }
 
                 break;
             case RoomPos.Outside:
-                if (Input.GetKeyDown(KeyCode.A))
-                {
-                    agent.destination = waypoints[0].transform.position;
-                    Movement = RoomPos.BedroomEnum;
-                }
-                dist = Vector3.Distance(waypoints[6].transform.position, transform.position);
-                if (dist <= 1)
+                
+                dist = Vector3.Distance(waypoints[5].transform.position, transform.position);
+                if (dist <= 1 && UIMAN.PlantenWaterenActive == false)
                 {
                     UIMAN.PlantenWaterenActive = true;
                 }
-                else
+                else if (UIMAN.PlantenWaterenActive == false)
                 {
                     UIMAN.PlantenWaterenActive = false;
+                    agent.destination = waypoints[0].transform.position;
+                    Movement = RoomPos.BedroomEnum;
                 }
                 break;
         }

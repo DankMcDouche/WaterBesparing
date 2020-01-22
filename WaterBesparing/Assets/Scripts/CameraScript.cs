@@ -10,7 +10,7 @@ public class CameraScript : MonoBehaviour
 
     RoomPos PlayerEnum;
 
-    public int rooms;
+    private int rooms;
 
     void Start()
     {
@@ -37,14 +37,8 @@ public class CameraScript : MonoBehaviour
                 Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, RoomPositions[rooms].transform.rotation, 1 * Time.deltaTime);
 
                 break;
-            case RoomPos.Garage:
-                rooms = 3;
-                Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 1 * Time.deltaTime);
-                Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, RoomPositions[rooms].transform.rotation, 1 * Time.deltaTime);
-
-                break;
             case RoomPos.Outside:
-                rooms = 4;
+                rooms = 3;
                 Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, RoomPositions[rooms].transform.position, 1 * Time.deltaTime);
                 Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, RoomPositions[rooms].transform.rotation, 1 * Time.deltaTime);
                 break;

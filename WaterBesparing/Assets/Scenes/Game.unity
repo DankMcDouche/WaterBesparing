@@ -279,6 +279,11 @@ MonoBehaviour:
   PlantenWaterenKeuze_1: {fileID: 65501295}
   PlantenWaterenKeuze_2: {fileID: 2069971961}
   PlantenWaterenKeuze_3: {fileID: 1797766778}
+  showerQ: 0
+  toiletQ: 0
+  wasQ: 0
+  vaatQ: 0
+  plantQ: 0
 --- !u!1 &65501294
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,6 +387,11 @@ MonoBehaviour:
   PlantenWaterenKeuze_1: {fileID: 65501295}
   PlantenWaterenKeuze_2: {fileID: 2069971961}
   PlantenWaterenKeuze_3: {fileID: 1797766778}
+  showerQ: 0
+  toiletQ: 0
+  wasQ: 0
+  vaatQ: 0
+  plantQ: 0
 --- !u!114 &65501297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,7 +475,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 519489216}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 20, y: 160, z: 0}
 --- !u!1 &204573006
 GameObject:
@@ -625,6 +635,41 @@ MonoBehaviour:
   PlantenWaterenKeuze_1: {fileID: 65501295}
   PlantenWaterenKeuze_2: {fileID: 2069971961}
   PlantenWaterenKeuze_3: {fileID: 1797766778}
+  showerQ: 0
+  toiletQ: 0
+  wasQ: 0
+  vaatQ: 0
+  plantQ: 0
+--- !u!1 &328309405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 328309406}
+  m_Layer: 0
+  m_Name: BathroomToilet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &328309406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328309405}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.47, y: 4.68, z: -1.43}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1401647310}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &385012892
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,7 +770,6 @@ MonoBehaviour:
   - {fileID: 1316229085}
   - {fileID: 1857542070}
   - {fileID: 421215751}
-  - {fileID: 1948542017}
   - {fileID: 66700596}
   rooms: 0
 --- !u!1 &421215751
@@ -1032,8 +1076,9 @@ MonoBehaviour:
   waypoints:
   - {fileID: 432845019}
   - {fileID: 1927570065}
+  - {fileID: 328309405}
+  - {fileID: 552311108}
   - {fileID: 1379289721}
-  - {fileID: 1366980995}
   - {fileID: 2009200510}
   Destination: 0
   touchInputMask:
@@ -1046,6 +1091,7 @@ MonoBehaviour:
   _Rigidbody: {fileID: 0}
   agent: {fileID: 457205504}
   Anim: {fileID: 457205507}
+  IO: {fileID: 0}
 --- !u!95 &488511215
 Animator:
   serializedVersion: 3
@@ -1095,10 +1141,39 @@ Transform:
   - {fileID: 1316229086}
   - {fileID: 1857542071}
   - {fileID: 421215752}
-  - {fileID: 1948542018}
   - {fileID: 66700597}
   m_Father: {fileID: 1253711877}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &552311108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 552311109}
+  m_Layer: 0
+  m_Name: Bathroom Wasmachine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &552311109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552311108}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.88, y: 4.68, z: -1.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1401647310}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &563547905
 GameObject:
@@ -1288,6 +1363,11 @@ MonoBehaviour:
   PlantenWaterenKeuze_1: {fileID: 65501295}
   PlantenWaterenKeuze_2: {fileID: 2069971961}
   PlantenWaterenKeuze_3: {fileID: 1797766778}
+  showerQ: 0
+  toiletQ: 0
+  wasQ: 0
+  vaatQ: 0
+  plantQ: 0
 --- !u!114 &591815205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1446,6 +1526,11 @@ MonoBehaviour:
   PlantenWaterenKeuze_1: {fileID: 65501295}
   PlantenWaterenKeuze_2: {fileID: 2069971961}
   PlantenWaterenKeuze_3: {fileID: 1797766778}
+  showerQ: 0
+  toiletQ: 0
+  wasQ: 0
+  vaatQ: 0
+  plantQ: 0
 --- !u!114 &645870262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1550,6 +1635,11 @@ MonoBehaviour:
   PlantenWaterenKeuze_1: {fileID: 65501295}
   PlantenWaterenKeuze_2: {fileID: 2069971961}
   PlantenWaterenKeuze_3: {fileID: 1797766778}
+  showerQ: 0
+  toiletQ: 0
+  wasQ: 0
+  vaatQ: 0
+  plantQ: 0
 --- !u!114 &670961886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1762,6 +1852,11 @@ MonoBehaviour:
   PlantenWaterenKeuze_1: {fileID: 65501295}
   PlantenWaterenKeuze_2: {fileID: 2069971961}
   PlantenWaterenKeuze_3: {fileID: 1797766778}
+  showerQ: 0
+  toiletQ: 0
+  wasQ: 0
+  vaatQ: 0
+  plantQ: 0
 --- !u!114 &896058110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1866,6 +1961,11 @@ MonoBehaviour:
   PlantenWaterenKeuze_1: {fileID: 65501295}
   PlantenWaterenKeuze_2: {fileID: 2069971961}
   PlantenWaterenKeuze_3: {fileID: 1797766778}
+  showerQ: 0
+  toiletQ: 0
+  wasQ: 0
+  vaatQ: 0
+  plantQ: 0
 --- !u!114 &918155245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2078,6 +2178,11 @@ MonoBehaviour:
   PlantenWaterenKeuze_1: {fileID: 65501295}
   PlantenWaterenKeuze_2: {fileID: 2069971961}
   PlantenWaterenKeuze_3: {fileID: 1797766778}
+  showerQ: 0
+  toiletQ: 0
+  wasQ: 0
+  vaatQ: 0
+  plantQ: 0
 --- !u!114 &1003795622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2236,6 +2341,11 @@ MonoBehaviour:
   PlantenWaterenKeuze_1: {fileID: 65501295}
   PlantenWaterenKeuze_2: {fileID: 2069971961}
   PlantenWaterenKeuze_3: {fileID: 1797766778}
+  showerQ: 0
+  toiletQ: 0
+  wasQ: 0
+  vaatQ: 0
+  plantQ: 0
 --- !u!114 &1177207006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2400,36 +2510,6 @@ Transform:
   m_Father: {fileID: 519489216}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 30, y: 120, z: 5}
---- !u!1 &1366980995
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1366980996}
-  m_Layer: 0
-  m_Name: Garage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1366980996
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1366980995}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.26, y: 1.4, z: -0.71}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1401647310}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1379289721
 GameObject:
   m_ObjectHideFlags: 0
@@ -2458,7 +2538,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1401647310}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1389098821
 GameObject:
@@ -2582,6 +2662,11 @@ MonoBehaviour:
   PlantenWaterenKeuze_1: {fileID: 65501295}
   PlantenWaterenKeuze_2: {fileID: 2069971961}
   PlantenWaterenKeuze_3: {fileID: 1797766778}
+  showerQ: 0
+  toiletQ: 0
+  wasQ: 0
+  vaatQ: 0
+  plantQ: 0
 --- !u!114 &1389098825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2647,8 +2732,9 @@ Transform:
   m_Children:
   - {fileID: 432845020}
   - {fileID: 1927570066}
+  - {fileID: 328309406}
+  - {fileID: 552311109}
   - {fileID: 1379289722}
-  - {fileID: 1366980996}
   - {fileID: 2009200511}
   m_Father: {fileID: 1253711877}
   m_RootOrder: 0
@@ -2811,6 +2897,11 @@ MonoBehaviour:
   PlantenWaterenKeuze_1: {fileID: 65501295}
   PlantenWaterenKeuze_2: {fileID: 2069971961}
   PlantenWaterenKeuze_3: {fileID: 1797766778}
+  showerQ: 0
+  toiletQ: 0
+  wasQ: 0
+  vaatQ: 0
+  plantQ: 0
 --- !u!1 &1446856772
 GameObject:
   m_ObjectHideFlags: 0
@@ -3082,7 +3173,7 @@ GameObject:
   - component: {fileID: 1563325859}
   - component: {fileID: 1563325858}
   m_Layer: 0
-  m_Name: UI Manager
+  m_Name: UIManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3120,6 +3211,11 @@ MonoBehaviour:
   PlantenWaterenActive: 0
   WasmachineActive: 0
   OpschonenActive: 0
+  showerQ: 0
+  toiletQ: 0
+  wasQ: 0
+  vaatQ: 0
+  plantQ: 0
 --- !u!4 &1563325859
 Transform:
   m_ObjectHideFlags: 0
@@ -3367,6 +3463,11 @@ MonoBehaviour:
   PlantenWaterenKeuze_1: {fileID: 65501295}
   PlantenWaterenKeuze_2: {fileID: 2069971961}
   PlantenWaterenKeuze_3: {fileID: 1797766778}
+  showerQ: 0
+  toiletQ: 0
+  wasQ: 0
+  vaatQ: 0
+  plantQ: 0
 --- !u!114 &1797766778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3544,6 +3645,11 @@ MonoBehaviour:
   PlantenWaterenKeuze_1: {fileID: 65501295}
   PlantenWaterenKeuze_2: {fileID: 2069971961}
   PlantenWaterenKeuze_3: {fileID: 1797766778}
+  showerQ: 0
+  toiletQ: 0
+  wasQ: 0
+  vaatQ: 0
+  plantQ: 0
 --- !u!114 &1817043531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3728,36 +3834,6 @@ Transform:
   m_Father: {fileID: 1401647310}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1948542017
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1948542018}
-  m_Layer: 0
-  m_Name: Garage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1948542018
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948542017}
-  m_LocalRotation: {x: 0.05939118, y: 0.92541665, z: -0.16317591, w: 0.33682415}
-  m_LocalPosition: {x: -0.884, y: 3.473, z: 1.983}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 519489216}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 20, y: 140, z: 0}
 --- !u!1 &2009200510
 GameObject:
   m_ObjectHideFlags: 0
@@ -3786,7 +3862,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1401647310}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2024134962
 GameObject:
@@ -3924,6 +4000,11 @@ MonoBehaviour:
   PlantenWaterenKeuze_1: {fileID: 65501295}
   PlantenWaterenKeuze_2: {fileID: 2069971961}
   PlantenWaterenKeuze_3: {fileID: 1797766778}
+  showerQ: 0
+  toiletQ: 0
+  wasQ: 0
+  vaatQ: 0
+  plantQ: 0
 --- !u!114 &2069971963
 MonoBehaviour:
   m_ObjectHideFlags: 0
