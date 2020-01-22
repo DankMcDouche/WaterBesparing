@@ -47,21 +47,75 @@ public class InteractableObjects : MonoBehaviour
             waterSlider.fillAmount += 0.05f;
             UIman.OpschonenActive = false;
         }
+//----------------------------------------------------
+        if (ToiletKeuze_1 == true)
+        {
+            waterSlider.fillAmount += 0.15f;
+            UIman.OpschonenActive = false;
+        }
+        if (ToiletKeuze_2 == true)
+        {
+            waterSlider.fillAmount += 0.1f;
+            UIman.OpschonenActive = false;
+        }
+        if (ToiletKeuze_3 == true)
+        {
+            waterSlider.fillAmount += 0.05f;
+            UIman.OpschonenActive = false;
+        }
+//----------------------------------------------------
+        if (WasmachineKeuze_1 == true)
+        {
+            waterSlider.fillAmount += 0.15f;
+            UIman.OpschonenActive = false;
+        }
+        if (WasmachineKeuze_2 == true)
+        {
+            waterSlider.fillAmount += 0.1f;
+            UIman.OpschonenActive = false;
+        }
+        if (WasmachineKeuze_3 == true)
+        {
+            waterSlider.fillAmount += 0.05f;
+            UIman.OpschonenActive = false;
+        }
+//----------------------------------------------------
+        if (AfwasKeuze_1 == true)
+        {
+            waterSlider.fillAmount += 0.15f;
+            UIman.OpschonenActive = false;
+        }
+        if (AfwasKeuze_2 == true)
+        {
+            waterSlider.fillAmount += 0.1f;
+            UIman.OpschonenActive = false;
+        }
+        if (AfwasKeuze_3 == true)
+        {
+            waterSlider.fillAmount += 0.05f;
+            UIman.OpschonenActive = false;
+        }
+//----------------------------------------------------
+        if (PlantenWaterenKeuze_1 == true)
+        {
+            waterSlider.fillAmount += 0.15f;
+            UIman.OpschonenActive = false;
+        }
+        if (PlantenWaterenKeuze_2 == true)
+        {
+            waterSlider.fillAmount += 0.1f;
+            UIman.OpschonenActive = false;
+        }
+        if (PlantenWaterenKeuze_3 == true)
+        {
+            waterSlider.fillAmount += 0.05f;
+            UIman.OpschonenActive = false;
+        }
+//----------------------------------------------------
 
-        //    if (AfwasKeuze_1 == true)
-        //    {
-        //        waterSlider.fillAmount += 0.15f;
-        //    }
-        //    if (AfwasKeuze_2 == true)
-        //    {
-        //        waterSlider.fillAmount += 0.1f;
-        //    }
-        //    if (AfwasKeuze_3 == true)
-        //    {
-        //        waterSlider.fillAmount += 0.05f;
-        //    }
+
     }
-        
+
 
 }
   
