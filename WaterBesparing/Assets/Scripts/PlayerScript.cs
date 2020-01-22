@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
+
 public enum RoomPos
 {
     BedroomEnum,
@@ -197,6 +199,7 @@ public class PlayerScript : MonoBehaviour
                     {
                         agent.destination = waypoints[0].transform.position;
                         Movement = RoomPos.BedroomEnum;
+                        SceneManager.LoadScene("End");
                     }
                     else if (NoPlant == false)
                     {

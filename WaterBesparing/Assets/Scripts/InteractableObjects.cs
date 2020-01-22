@@ -50,189 +50,163 @@ public class InteractableObjects : MonoBehaviour
         Questions = rooms.Shower;
     }
 
+    //meeste water 701,2L
+    //minste water 252,6L
+    //neutraal water 0L
+
     public void AddWaterShower()
     {
         if (OpschonenKeuze_1 == true)
         {
-            waterSlider.fillAmount += 0.15f;
+            waterSlider.fillAmount += 0.083f;
             UIman.OpschonenActive = false;
             Player.NoShower = true;
             print("OpschoonKeuze 1 clicked");
         }
-        else if (OpschonenKeuze_2 == true)
+    }
+    public void AddWaterShower2()
+    {
+        if (OpschonenKeuze_2 == true)
         {
-            waterSlider.fillAmount += 0.1f;
+            waterSlider.fillAmount += 0f;
             UIman.OpschonenActive = false;
             Player.NoShower = true;
             print("OpschoonKeuze 2 clicked");
-        }
-        else if (OpschonenKeuze_3 == true)
+        } 
+    }
+    public void AddWaterShower3()
+    {
+      if (OpschonenKeuze_3 == true)
+      {
+          waterSlider.fillAmount += 0.043f;
+          UIman.OpschonenActive = false;
+          Player.NoShower = true;
+          print("OpschoonKeuze 3 clicked");
+      }
+    }
+    public void AddWaterAfwas()
+    {
+        if (AfwasKeuze_1 == true)
         {
-            waterSlider.fillAmount += 0.05f;
-            UIman.OpschonenActive = false;
-            Player.NoShower = true;
-            print("OpschoonKeuze 3 clicked");
+            waterSlider.fillAmount += 0.099f;
+            UIman.AfwasActive = false;
+            Player.NoVaat = true;
+            print("AfwasKeuze_1 clicked");
         }
     }
-    public void AddWaterToilet()
+    public void AddWaterAfwas2()
     {
-        if (ToiletKeuze_1 == true)
+        if (AfwasKeuze_2 == true)
         {
-            waterSlider.fillAmount += 0.15f;
-            UIman.ToiletActive = false;
-            Player.NoToilet = true;
-            print("ToiletKeuze_1 clicked");
-
+            waterSlider.fillAmount += 0f;
+            UIman.AfwasActive = false;
+            Player.NoVaat = true;
+            print("AfwasKeuze_2 clicked");
         }
-        else if (ToiletKeuze_2 == true)
+    }
+    public void AddWaterAfwas3()
+    {
+        if (AfwasKeuze_3 == true)
         {
-            waterSlider.fillAmount += 0.1f;
-            UIman.ToiletActive = false;
-            Player.NoToilet = true;
-            print("ToiletKeuze_2 clicked");
-
-        }
-        else if (ToiletKeuze_3 == true)
-        {
-            waterSlider.fillAmount += 0.05f;
-            UIman.ToiletActive = false;
-            Player.NoToilet = true;
-            print("ToiletKeuze_3 clicked");
+            waterSlider.fillAmount += 0.078f;
+            UIman.AfwasActive = false;
+            Player.NoVaat = true;
+            print("AfwasKeuze_3 clicked");
         }
     }
     public void AddWaterWasmachine()
     {
         if (WasmachineKeuze_1 == true)
         {
-            waterSlider.fillAmount += 0.15f;
+            waterSlider.fillAmount += 0.100f;
             UIman.WasmachineActive = false;
             Player.NoWash = true;
             print("WasmachineKeuze_1 clicked");
         }
-        else if (WasmachineKeuze_2 == true)
+    }
+    public void AddWaterWasmachine2()
+    {
+        if (WasmachineKeuze_2 == true)
         {
-            waterSlider.fillAmount += 0.1f;
+            waterSlider.fillAmount += 0f;
             UIman.WasmachineActive = false;
             Player.NoWash = true;
             print("WasmachineKeuze_2 clicked");
         }
-        else if (WasmachineKeuze_3 == true)
+    }
+    public void AddWaterWasmachine3()
+    {
+        if (WasmachineKeuze_3 == true)
         {
-            waterSlider.fillAmount += 0.05f;
+            waterSlider.fillAmount += 0.010f;
             UIman.WasmachineActive = false;
             Player.NoWash = true;
             print("WasmachineKeuze_3 clicked");
-        }
-    }
-    public void AddWaterAfwas()
-    {
-        if (AfwasKeuze_1 == true)
-        {
-            waterSlider.fillAmount += 0.15f;
-            UIman.AfwasActive = false;
-            Player.NoVaat = true;
-            print("AfwasKeuze_1 clicked");
-        }
-        else if (AfwasKeuze_2 == true)
-        {
-            waterSlider.fillAmount += 0.1f;
-            UIman.AfwasActive = false;
-            Player.NoVaat = true;
-            print("AfwasKeuze_2 clicked");
-        }
-        else if (AfwasKeuze_3 == true)
-        {
-            waterSlider.fillAmount += 0.05f;
-            UIman.AfwasActive = false;
-            Player.NoVaat = true;
-            print("AfwasKeuze_3 clicked");
-        }
+        }  
     }
     public void AddWaterPlanten()
     {
         if (PlantenWaterenKeuze_1 == true)
         {
-            waterSlider.fillAmount += 0.15f;
+            waterSlider.fillAmount += 0.77f;
             UIman.PlantenWaterenActive = false;
             Player.NoPlant = true;
             Questions = rooms.Shower;
             print("PlantenWaterenKeuze_1 clicked");
         }
-        else if (PlantenWaterenKeuze_2 == true)
+    }
+    public void AddWaterPlanten2()
+    {
+        if (PlantenWaterenKeuze_2 == true)
         {
-            waterSlider.fillAmount += 0.1f;
+            waterSlider.fillAmount += 0f;
             UIman.PlantenWaterenActive = false;
             Player.NoPlant = true;
             Questions = rooms.Shower;
             print("PlantenWaterenKeuze_2 clicked");
         }
-        else if (PlantenWaterenKeuze_3 == true)
+    }
+    public void AddWaterPlanten3()
+    {
+        if (PlantenWaterenKeuze_3 == true)
         {
-            waterSlider.fillAmount += 0.05f;
+            waterSlider.fillAmount += 0.25f;
             UIman.PlantenWaterenActive = false;
             Player.NoPlant = true;
             Questions = rooms.Shower;
             print("PlantenWaterenKeuze_3 clicked");
         }
     }
-    //public void AddWater()
-    //{
-    //    switch (Questions)
-    //    {
-    //            break;
-    //        case rooms.Vaat:
-    //            if (AfwasKeuze_1 == true)
-    //            {
-    //                waterSlider.fillAmount += 0.15f;
-    //                UIman.AfwasActive = false;
-    //                Player.NoVaat = true;
-    //                Questions = rooms.Plant;
-    //                print("AfwasKeuze_1 clicked");
-    //            }
-    //            else if (AfwasKeuze_2 == true)
-    //            {
-    //                waterSlider.fillAmount += 0.1f;
-    //                UIman.AfwasActive = false;
-    //                Player.NoVaat = true;
-    //                Questions = rooms.Plant;
-    //                print("AfwasKeuze_2 clicked");
-    //            }
-    //            else if (AfwasKeuze_3 == true)
-    //            {
-    //                waterSlider.fillAmount += 0.05f;
-    //                UIman.AfwasActive = false;
-    //                Player.NoVaat = true;
-    //                Questions = rooms.Plant;
-    //                print("AfwasKeuze_3 clicked");
-    //            }
-    //            break;
-    //        case rooms.Plant:
-    //            if (PlantenWaterenKeuze_1 == true)
-    //            {
-    //                waterSlider.fillAmount += 0.15f;
-    //                UIman.PlantenWaterenActive = false;
-    //                Player.NoPlant = true;
-    //                Questions = rooms.Shower;
-    //                print("PlantenWaterenKeuze_1 clicked");
-    //            }
-    //            else if (PlantenWaterenKeuze_2 == true)
-    //            {
-    //                waterSlider.fillAmount += 0.1f;
-    //                UIman.PlantenWaterenActive = false;
-    //                Player.NoPlant = true;
-    //                Questions = rooms.Shower;
-    //                print("PlantenWaterenKeuze_2 clicked");
-    //            }
-    //            else if (PlantenWaterenKeuze_3 == true)
-    //            {
-    //                waterSlider.fillAmount += 0.05f;
-    //                UIman.PlantenWaterenActive = false;
-    //                Player.NoPlant = true;
-    //                Questions = rooms.Shower;
-    //                print("PlantenWaterenKeuze_3 clicked");
-    //            }
-    //            break;
-    //    }
-    //}
+    public void AddWaterToilet()
+    {
+        if (ToiletKeuze_1 == true)
+        {
+            waterSlider.fillAmount += 0.080f;
+            UIman.ToiletActive = false;
+            Player.NoToilet = true;
+            print("ToiletKeuze_1 clicked");
+
+        }
+    }
+    public void AddWaterToilet2()
+    {
+        if (ToiletKeuze_2 == true)
+        {
+            waterSlider.fillAmount += 0f;
+            UIman.ToiletActive = false;
+            Player.NoToilet = true;
+            print("ToiletKeuze_2 clicked");
+        }
+    }
+    public void AddWaterToilet3()
+    {
+        if (ToiletKeuze_3 == true)
+        {
+            waterSlider.fillAmount += 0.040f;
+            UIman.ToiletActive = false;
+            Player.NoToilet = true;
+            print("ToiletKeuze_3 clicked");
+        }
+    }
 }
   

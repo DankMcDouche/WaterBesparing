@@ -36,14 +36,14 @@ public class UImanager : MonoBehaviour
     }
     void Update()
     {
-        print(OpschonenActive);
+        //print(OpschonenActive);
 
         if (OpschonenActive == true)
         {
             OpschonenKeuze_1.SetActive(true);
             OpschonenKeuze_2.SetActive(true);
             OpschonenKeuze_3.SetActive(true);
-            print("OpschonenActive true");
+           // print("OpschonenActive true");
 
         }
         else if (OpschonenActive == false)
@@ -51,7 +51,7 @@ public class UImanager : MonoBehaviour
             OpschonenKeuze_1.gameObject.SetActive(false);
             OpschonenKeuze_2.gameObject.SetActive(false);
             OpschonenKeuze_3.gameObject.SetActive(false);
-            print("OpschonenActive false");
+            //print("OpschonenActive false");
 
         }
         if (ToiletActive)
@@ -59,7 +59,7 @@ public class UImanager : MonoBehaviour
             ToiletKeuze_1.SetActive(true);
             ToiletKeuze_2.SetActive(true);
             ToiletKeuze_3.SetActive(true);
-            print("ToiletActive true");
+            //print("ToiletActive true");
 
         }
         else if(ToiletActive == false)
@@ -67,7 +67,7 @@ public class UImanager : MonoBehaviour
             ToiletKeuze_1.gameObject.SetActive(false);
             ToiletKeuze_2.gameObject.SetActive(false);
             ToiletKeuze_3.gameObject.SetActive(false);
-            print("ToiletActive false");
+           // print("ToiletActive false");
 
         }
         if (WasmachineActive)
@@ -75,7 +75,7 @@ public class UImanager : MonoBehaviour
             WasmachineKeuze_1.SetActive(true);
             WasmachineKeuze_2.SetActive(true);
             WasmachineKeuze_3.SetActive(true);
-            print("WasmachineActive true");
+           // print("WasmachineActive true");
 
         }
         else if (WasmachineActive == false)
@@ -83,7 +83,7 @@ public class UImanager : MonoBehaviour
             WasmachineKeuze_1.gameObject.SetActive(false);
             WasmachineKeuze_2.gameObject.SetActive(false);
             WasmachineKeuze_3.gameObject.SetActive(false);
-            print("WasmachineActive false");
+          //  print("WasmachineActive false");
 
         }
         if (AfwasActive)
@@ -92,7 +92,7 @@ public class UImanager : MonoBehaviour
             AfwasKeuze_1.SetActive(true);
             AfwasKeuze_2.SetActive(true);
             AfwasKeuze_3.SetActive(true);
-            print("AfwasActive true");
+           // print("AfwasActive true");
 
         }
         else if (AfwasActive == false)
@@ -100,7 +100,7 @@ public class UImanager : MonoBehaviour
             AfwasKeuze_1.gameObject.SetActive(false);
             AfwasKeuze_2.gameObject.SetActive(false);
             AfwasKeuze_3.gameObject.SetActive(false);
-            print("AfwasActive false");
+           // print("AfwasActive false");
 
         }
         if (PlantenWaterenActive)
@@ -109,14 +109,14 @@ public class UImanager : MonoBehaviour
             PlantenWaterenKeuze_1.SetActive(true);
             PlantenWaterenKeuze_2.SetActive(true);
             PlantenWaterenKeuze_3.SetActive(true);
-            print("PlantenWaterenActive true");
+          //  print("PlantenWaterenActive true");
         }
         else if (PlantenWaterenActive == false)
         {
             PlantenWaterenKeuze_1.gameObject.SetActive(false);
             PlantenWaterenKeuze_2.gameObject.SetActive(false);
             PlantenWaterenKeuze_3.gameObject.SetActive(false);
-            print("PlantenWaterenActive false");
+           // print("PlantenWaterenActive false");
         }
     }
 

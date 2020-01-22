@@ -392,7 +392,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 182708285}
-        m_MethodName: AddWaterWasmachine
+        m_MethodName: AddWaterWasmachine2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -708,7 +708,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 214746833}
-        m_MethodName: AddWaterToilet
+        m_MethodName: AddWaterToilet3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -997,7 +997,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 395823141}
-        m_MethodName: AddWaterWasmachine
+        m_MethodName: AddWaterWasmachine3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1786,7 +1786,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 722160631}
-        m_MethodName: AddWaterToilet
+        m_MethodName: AddWaterToilet2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1944,7 +1944,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 751392740}
-        m_MethodName: AddWaterAfwas
+        m_MethodName: AddWaterAfwas2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2102,7 +2102,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1182572961}
-        m_MethodName: AddWaterShower
+        m_MethodName: AddWaterShower2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2358,7 +2358,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1299834780}
-        m_MethodName: AddWaterPlanten
+        m_MethodName: AddWaterPlanten3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2612,7 +2612,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1413355644}
-        m_MethodName: AddWaterShower
+        m_MethodName: AddWaterShower3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3657,7 +3657,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1890308827}
-        m_MethodName: AddWaterPlanten
+        m_MethodName: AddWaterPlanten2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3908,7 +3908,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2077604145}
-        m_MethodName: AddWaterAfwas
+        m_MethodName: AddWaterAfwas3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
