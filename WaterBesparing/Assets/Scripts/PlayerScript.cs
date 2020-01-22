@@ -22,6 +22,7 @@ public class PlayerScript : MonoBehaviour
     public RoomPos Movement;
 
     float dist;
+    public float PlayerWater;
 
     public Vector3 direction;
 
@@ -49,15 +50,18 @@ public class PlayerScript : MonoBehaviour
         shower = false;
         toilet = false;
         washingmachine = false;
-
+        
         NoShower = false;
         NoToilet = false;
         NoWash = false;
         NoVaat = false;
         NoPlant = false;
+        PlayerPrefs.SetFloat("WaterFloat", PlayerWater);
 
 
     }
+
+    
 
     void Update()
     {
@@ -107,13 +111,9 @@ public class PlayerScript : MonoBehaviour
         switch (Movement)
         {
             case RoomPos.BedroomEnum:
-
-                if (Input.GetKeyDown(KeyCode.A))
-                {
-                    agent.destination = waypoints[1].transform.position;
-                    Movement = RoomPos.BathroomEnum;
-                    shower = true;
-                }
+                agent.destination = waypoints[1].transform.position;
+                Movement = RoomPos.BathroomEnum;
+                shower = true;
                 break;
             case RoomPos.BathroomEnum:
 
@@ -209,5 +209,7 @@ public class PlayerScript : MonoBehaviour
                 break;
         }
     }
+    
 }
+
 

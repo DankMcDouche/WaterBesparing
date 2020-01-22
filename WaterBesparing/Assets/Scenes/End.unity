@@ -767,8 +767,9 @@ GameObject:
   - component: {fileID: 698042403}
   - component: {fileID: 698042405}
   - component: {fileID: 698042404}
+  - component: {fileID: 698042406}
   m_Layer: 5
-  m_Name: Text
+  m_Name: PlayerWaterTextUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -790,7 +791,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -735, y: -394}
+  m_AnchoredPosition: {x: -645, y: -394}
   m_SizeDelta: {x: 715.1, y: 153.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &698042404
@@ -824,7 +825,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Jou Gebruikte Water : \n"
+  m_Text: "Jouw Gebruikte Water : \n"
 --- !u!222 &698042405
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -833,6 +834,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698042402}
   m_CullTransparentMesh: 0
+--- !u!114 &698042406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698042402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1ad49dc8c497341a7206fe08056755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerWaterText: {fileID: 698042404}
+  WaterAmount: 0
 --- !u!1 &950739517
 GameObject:
   m_ObjectHideFlags: 0

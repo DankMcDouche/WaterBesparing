@@ -29,6 +29,7 @@ public class UImanager : MonoBehaviour
     public bool PlantenWaterenActive;
     public bool WasmachineActive;
     public bool OpschonenActive;
+    public float WaterUI;
 
     void Start()
     {

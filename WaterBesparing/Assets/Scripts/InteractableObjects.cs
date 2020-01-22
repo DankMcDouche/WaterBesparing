@@ -15,11 +15,12 @@ public class InteractableObjects : MonoBehaviour
 {
     UImanager UIman;
     PlayerScript Player;
+    PlayerWater playerwater;
 
     rooms Questions;
 
     public Image waterSlider;
-    public int Water;
+    public float Water;
                   
     public Button AfwasKeuze_1;
     public Button AfwasKeuze_2;
@@ -50,6 +51,13 @@ public class InteractableObjects : MonoBehaviour
         Questions = rooms.Shower;
     }
 
+    public void Update()
+    {
+        print(Water);
+        UIman.WaterUI = Water;
+        
+    }
+
     //meeste water 701,2L
     //minste water 252,6L
     //neutraal water 0L
@@ -62,6 +70,7 @@ public class InteractableObjects : MonoBehaviour
             UIman.OpschonenActive = false;
             Player.NoShower = true;
             print("OpschoonKeuze 1 clicked");
+            Water += 120f;
         }
     }
     public void AddWaterShower2()
@@ -82,7 +91,8 @@ public class InteractableObjects : MonoBehaviour
           UIman.OpschonenActive = false;
           Player.NoShower = true;
           print("OpschoonKeuze 3 clicked");
-      }
+            Water += 60f;
+        }
     }
     public void AddWaterAfwas()
     {
@@ -92,6 +102,7 @@ public class InteractableObjects : MonoBehaviour
             UIman.AfwasActive = false;
             Player.NoVaat = true;
             print("AfwasKeuze_1 clicked");
+            Water += 16;
         }
     }
     public void AddWaterAfwas2()
@@ -112,6 +123,7 @@ public class InteractableObjects : MonoBehaviour
             UIman.AfwasActive = false;
             Player.NoVaat = true;
             print("AfwasKeuze_3 clicked");
+            Water += 5.5f;
         }
     }
     public void AddWaterWasmachine()
@@ -122,6 +134,7 @@ public class InteractableObjects : MonoBehaviour
             UIman.WasmachineActive = false;
             Player.NoWash = true;
             print("WasmachineKeuze_1 clicked");
+            Water += 14;
         }
     }
     public void AddWaterWasmachine2()
@@ -142,6 +155,7 @@ public class InteractableObjects : MonoBehaviour
             UIman.WasmachineActive = false;
             Player.NoWash = true;
             print("WasmachineKeuze_3 clicked");
+            Water += 1.5f;
         }  
     }
     public void AddWaterPlanten()
@@ -153,6 +167,7 @@ public class InteractableObjects : MonoBehaviour
             Player.NoPlant = true;
             Questions = rooms.Shower;
             print("PlantenWaterenKeuze_1 clicked");
+            Water += 540;
         }
     }
     public void AddWaterPlanten2()
@@ -175,6 +190,7 @@ public class InteractableObjects : MonoBehaviour
             Player.NoPlant = true;
             Questions = rooms.Shower;
             print("PlantenWaterenKeuze_3 clicked");
+            Water += 180;
         }
     }
     public void AddWaterToilet()
@@ -185,6 +201,7 @@ public class InteractableObjects : MonoBehaviour
             UIman.ToiletActive = false;
             Player.NoToilet = true;
             print("ToiletKeuze_1 clicked");
+            Water += 11.2f;
 
         }
     }
@@ -206,6 +223,7 @@ public class InteractableObjects : MonoBehaviour
             UIman.ToiletActive = false;
             Player.NoToilet = true;
             print("ToiletKeuze_3 clicked");
+            Water += 5.6f;
         }
     }
 }
