@@ -32,11 +32,6 @@ public class UImanager : MonoBehaviour
     public bool WasmachineActive;
     public bool OpschonenActive;
 
-    public bool OpschonenF;
-    public bool ToiletF;
-    public bool WasF;
-    public bool VaatF;
-    public bool PlantF;
 
     void Start()
     {
@@ -83,6 +78,7 @@ public class UImanager : MonoBehaviour
             OpschonenKeuze_1.gameObject.SetActive(false);
             OpschonenKeuze_2.gameObject.SetActive(false);
             OpschonenKeuze_3.gameObject.SetActive(false);
+            print("Shower gaat uit");
         }
         if (ToiletActive)
         {

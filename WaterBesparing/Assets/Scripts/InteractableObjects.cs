@@ -4,8 +4,19 @@ using UnityEngine;
 using UnityEngine.UI; 
 public class InteractableObjects : MonoBehaviour
 {
+    enum rooms
+    {
+        Shower,
+        Toilet,
+        Wash,
+        Vaat,
+        Plant
+    }
+
     UImanager UIman;
     PlayerScript Player;
+
+    rooms Questions;
 
     public Image waterSlider;
     public int Water;
@@ -32,111 +43,235 @@ public class InteractableObjects : MonoBehaviour
     {
         UIman = GameObject.Find("UIManager").GetComponent<UImanager>();
         Player = GameObject.Find("Polly").GetComponent<PlayerScript>();
-
+        Questions = rooms.Shower;
     }
    
     public void AddWater()
     {
-        if (OpschonenKeuze_1 == true)
+
+        switch (Questions)
         {
-            print("i press button");
-             waterSlider.fillAmount += 0.15f;
-             UIman.OpschonenActive = false;
-             Player.NoShower = true;
-         }
-         if (OpschonenKeuze_2 == true)
-         {
-             waterSlider.fillAmount += 0.1f;
-             UIman.OpschonenActive = false;
-            print("i press button");
-            Player.NoShower = true;
-        }
-         if (OpschonenKeuze_3 == true)
-         {
-             waterSlider.fillAmount += 0.05f;
-             UIman.OpschonenActive = false;
-            print("i press button");
-            Player.NoShower = true;
+            case rooms.Shower:
+                if (OpschonenKeuze_1 == true)
+                {
+                    print("i press button");
+                    waterSlider.fillAmount += 0.15f;
+                    UIman.OpschonenActive = false;
+                    Player.NoShower = true;
+                    Questions = rooms.Toilet;
+                }
+                else if (OpschonenKeuze_2 == true)
+                {
+                    waterSlider.fillAmount += 0.1f;
+                    UIman.OpschonenActive = false;
+                    print("i press button");
+                    Player.NoShower = true;
+                    Questions = rooms.Toilet;
+                }
+                else if (OpschonenKeuze_3 == true)
+                {
+                    waterSlider.fillAmount += 0.05f;
+                    UIman.OpschonenActive = false;
+                    print("i press button");
+                    Player.NoShower = true;
+                    Questions = rooms.Toilet;
+                }
+                break;
+            case rooms.Toilet:
+                if (ToiletKeuze_1 == true)
+                {
+                    print("toiletButton activate");
+                    waterSlider.fillAmount += 0.15f;
+                    UIman.ToiletActive = false;
+                    Player.NoToilet = true;
+                    Questions = rooms.Wash;
+                }
+                else if (ToiletKeuze_2 == true)
+                {
+                    waterSlider.fillAmount += 0.1f;
+                    UIman.ToiletActive = false;
+                    Player.NoToilet = true;
+                    Questions = rooms.Wash;
+                }
+                else if (ToiletKeuze_3 == true)
+                {
+                    waterSlider.fillAmount += 0.05f;
+                    UIman.ToiletActive = false;
+                    Player.NoToilet = true;
+                    Questions = rooms.Wash;
+                }
+                break;
+            case rooms.Wash:
+                if (WasmachineKeuze_1 == true)
+                {
+                    waterSlider.fillAmount += 0.15f;
+                    UIman.WasmachineActive = false;
+                    Player.NoWash = true;
+                    Questions = rooms.Vaat;
+                }
+                else if (WasmachineKeuze_2 == true)
+                {
+                    waterSlider.fillAmount += 0.1f;
+                    UIman.WasmachineActive = false;
+                    Player.NoWash = true;
+                    Questions = rooms.Vaat;
+                }
+                else if (WasmachineKeuze_3 == true)
+                {
+                    waterSlider.fillAmount += 0.05f;
+                    UIman.WasmachineActive = false;
+                    Player.NoWash = true;
+                    Questions = rooms.Vaat;
+                }
+                break;
+            case rooms.Vaat:
+                if (AfwasKeuze_1 == true)
+                {
+                    waterSlider.fillAmount += 0.15f;
+                    UIman.AfwasActive = false;
+                    Player.NoVaat = true;
+                    Questions = rooms.Plant;
+                }
+                else if (AfwasKeuze_2 == true)
+                {
+                    waterSlider.fillAmount += 0.1f;
+                    UIman.AfwasActive = false;
+                    Player.NoVaat = true;
+                    Questions = rooms.Plant;
+                }
+                else if (AfwasKeuze_3 == true)
+                {
+                    waterSlider.fillAmount += 0.05f;
+                    UIman.AfwasActive = false;
+                    Player.NoVaat = true;
+                    Questions = rooms.Plant;
+                }
+                break;
+            case rooms.Plant:
+                if (PlantenWaterenKeuze_1 == true)
+                {
+                    waterSlider.fillAmount += 0.15f;
+                    UIman.PlantenWaterenActive = false;
+                    Player.NoPlant = true;
+                    Questions = rooms.Shower;
+                }
+                else if (PlantenWaterenKeuze_2 == true)
+                {
+                    waterSlider.fillAmount += 0.1f;
+                    UIman.PlantenWaterenActive = false;
+                    Player.NoPlant = true;
+                    Questions = rooms.Shower;
+                }
+                else if (PlantenWaterenKeuze_3 == true)
+                {
+                    waterSlider.fillAmount += 0.05f;
+                    UIman.PlantenWaterenActive = false;
+                    Player.NoPlant = true;
+                    Questions = rooms.Shower;
+                }
+                break;
+
         }
 
-//----------------------------------------------------
-        if (ToiletKeuze_1 == true)
-        {
-            print("toiletButton activate");
-            waterSlider.fillAmount += 0.15f;
-            UIman.ToiletActive = false;
-            Player.NoToilet = true;
-        }
-        if (ToiletKeuze_2 == true)
-        {
-            waterSlider.fillAmount += 0.1f;
-            UIman.ToiletActive = false;
-            Player.NoToilet = true;
-        }
-        if (ToiletKeuze_3 == true)
-        {
-            waterSlider.fillAmount += 0.05f;
-            UIman.ToiletActive = false;
-            Player.NoToilet = true;
-        }
-//----------------------------------------------------
-        if (WasmachineKeuze_1 == true)
-        {
-            waterSlider.fillAmount += 0.15f;
-            UIman.WasmachineActive = false;
-            Player.NoWash = true;
-        }
-        if (WasmachineKeuze_2 == true)
-        {
-            waterSlider.fillAmount += 0.1f;
-            UIman.WasmachineActive = false;
-            Player.NoWash = true;
-        }
-        if (WasmachineKeuze_3 == true)
-        {
-            waterSlider.fillAmount += 0.05f;
-            UIman.WasmachineActive = false;
-            Player.NoWash = true;
-        }
-//----------------------------------------------------
-        if (AfwasKeuze_1 == true)
-        {
-            waterSlider.fillAmount += 0.15f;
-            UIman.AfwasActive = false;
-            Player.NoVaat = true;
-        }
-        if (AfwasKeuze_2 == true)
-        {
-            waterSlider.fillAmount += 0.1f;
-            UIman.AfwasActive = false;
-            Player.NoVaat = true;
-        }
-        if (AfwasKeuze_3 == true)
-        {
-            waterSlider.fillAmount += 0.05f;
-            UIman.AfwasActive = false;
-            Player.NoVaat = true;
-        }
-//----------------------------------------------------
-        if (PlantenWaterenKeuze_1 == true)
-        {
-            waterSlider.fillAmount += 0.15f;
-            UIman.PlantenWaterenActive = false;
-            Player.NoPlant = true;
-        }
-        if (PlantenWaterenKeuze_2 == true)
-        {
-            waterSlider.fillAmount += 0.1f;
-            UIman.PlantenWaterenActive = false;
-            Player.NoPlant = true;
+        //if (OpschonenKeuze_1 == true)
+        //{
+        //    print("i press button");
+        //     waterSlider.fillAmount += 0.15f;
+        //     UIman.OpschonenActive = false;
+        //     Player.NoShower = true;
+        // }
+        // else if (OpschonenKeuze_2 == true)
+        // {
+        //     waterSlider.fillAmount += 0.1f;
+        //     UIman.OpschonenActive = false;
+        //    print("i press button");
+        //    Player.NoShower = true;
+        //}
+        // else if (OpschonenKeuze_3 == true)
+        // {
+        //     waterSlider.fillAmount += 0.05f;
+        //     UIman.OpschonenActive = false;
+        //    print("i press button");
+        //    Player.NoShower = true;
+        //}
 
-        }
-        if (PlantenWaterenKeuze_3 == true)
-        {
-            waterSlider.fillAmount += 0.05f;
-            UIman.PlantenWaterenActive = false;
-            Player.NoPlant = true;
-        }
+//----------------------------------------------------
+//        else if (ToiletKeuze_1 == true)
+//        {
+//            print("toiletButton activate");
+//            waterSlider.fillAmount += 0.15f;
+//            UIman.ToiletActive = false;
+//            Player.NoToilet = true;
+//        }
+//        else if (ToiletKeuze_2 == true)
+//        {
+//            waterSlider.fillAmount += 0.1f;
+//            UIman.ToiletActive = false;
+//            Player.NoToilet = true;
+//        }
+//        else if (ToiletKeuze_3 == true)
+//        {
+//            waterSlider.fillAmount += 0.05f;
+//            UIman.ToiletActive = false;
+//            Player.NoToilet = true;
+//        }
+////----------------------------------------------------
+//        else if (WasmachineKeuze_1 == true)
+//        {
+//            waterSlider.fillAmount += 0.15f;
+//            UIman.WasmachineActive = false;
+//            Player.NoWash = true;
+//        }
+//        else if (WasmachineKeuze_2 == true)
+//        {
+//            waterSlider.fillAmount += 0.1f;
+//            UIman.WasmachineActive = false;
+//            Player.NoWash = true;
+//        }
+//        else if (WasmachineKeuze_3 == true)
+//        {
+//            waterSlider.fillAmount += 0.05f;
+//            UIman.WasmachineActive = false;
+//            Player.NoWash = true;
+//        }
+////----------------------------------------------------
+//        else if (AfwasKeuze_1 == true)
+//        {
+//            waterSlider.fillAmount += 0.15f;
+//            UIman.AfwasActive = false;
+//            Player.NoVaat = true;
+//        }
+//        else if (AfwasKeuze_2 == true)
+//        {
+//            waterSlider.fillAmount += 0.1f;
+//            UIman.AfwasActive = false;
+//            Player.NoVaat = true;
+//        }
+//        else if (AfwasKeuze_3 == true)
+//        {
+//            waterSlider.fillAmount += 0.05f;
+//            UIman.AfwasActive = false;
+//            Player.NoVaat = true;
+//        }
+////----------------------------------------------------
+//        else if (PlantenWaterenKeuze_1 == true)
+//        {
+//            waterSlider.fillAmount += 0.15f;
+//            UIman.PlantenWaterenActive = false;
+//            Player.NoPlant = true;
+//        }
+//        else if (PlantenWaterenKeuze_2 == true)
+//        {
+//            waterSlider.fillAmount += 0.1f;
+//            UIman.PlantenWaterenActive = false;
+//            Player.NoPlant = true;
+//        }
+//        else if (PlantenWaterenKeuze_3 == true)
+//        {
+//            waterSlider.fillAmount += 0.05f;
+//            UIman.PlantenWaterenActive = false;
+//            Player.NoPlant = true;
+//        }
 //----------------------------------------------------
 
 

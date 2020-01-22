@@ -148,7 +148,6 @@ public class PlayerScript : MonoBehaviour
                         else if (NoToilet == false)
                         {
                             UIMAN.ToiletActive = true;
-                            print("Ik will naar toilet");
                         }
                     }
                 }
