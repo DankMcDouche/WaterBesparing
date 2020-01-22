@@ -97,7 +97,11 @@ public class PlayerScript : MonoBehaviour
                 float dist = Vector3.Distance(waypoints[1].transform.position, transform.position);
                 if (dist <= 2)
                 {
-                    
+                    UIMAN.OpschonenActive = true;
+                }
+                else
+                {
+                    UIMAN.OpschonenActive = false;
                 }
 
                 break;
@@ -108,10 +112,15 @@ public class PlayerScript : MonoBehaviour
                     Movement = RoomPos.Garage;
                 }
                 dist = Vector3.Distance(waypoints[2].transform.position, transform.position);
-                if (dist <= 2)
+                if (dist <= 1)
                 {
                     UIMAN.AfwasActive = true;
                 }
+                else
+                {
+                    UIMAN.AfwasActive = false;
+                }
+
                 break;
             case RoomPos.Outside:
                 if (Input.GetKeyDown(KeyCode.A))
@@ -120,9 +129,13 @@ public class PlayerScript : MonoBehaviour
                     Movement = RoomPos.BedroomEnum;
                 }
                 dist = Vector3.Distance(waypoints[4].transform.position, transform.position);
-                if (dist <= 2)
+                if (dist <= 1)
                 {
                     UIMAN.PlantenWaterenActive = true;
+                }
+                else
+                {
+                    UIMAN.PlantenWaterenActive = false;
                 }
                 break;
             case RoomPos.Garage:
@@ -132,7 +145,7 @@ public class PlayerScript : MonoBehaviour
                     Movement = RoomPos.Outside;
                 }
                 dist = Vector3.Distance(waypoints[3].transform.position, transform.position);
-                if (dist <= 2)
+                if (dist <= 1)
                 {
                     //UIMAN.Active = true;
                 }

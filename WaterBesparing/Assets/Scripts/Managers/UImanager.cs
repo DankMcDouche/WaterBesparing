@@ -44,12 +44,24 @@ public class UImanager : MonoBehaviour
             AfwasKeuze_2.SetActive(true);
             AfwasKeuze_3.SetActive(true);
         }
+        else
+        {
+            AfwasKeuze_1.SetActive(false);
+            AfwasKeuze_2.SetActive(false);
+            AfwasKeuze_3.SetActive(false);
+        }
 
         if (ToiletActive)
         {
             ToiletKeuze_1.SetActive(true);
             ToiletKeuze_2.SetActive(true);
             ToiletKeuze_3.SetActive(true);
+        }
+        else
+        {
+            ToiletKeuze_1.SetActive(false);
+            ToiletKeuze_2.SetActive(false);
+            ToiletKeuze_3.SetActive(false);
         }
 
         if (PlantenWaterenActive)
@@ -58,6 +70,12 @@ public class UImanager : MonoBehaviour
             PlantenWaterenKeuze_2.SetActive(true);
             PlantenWaterenKeuze_3.SetActive(true);
         }
+        else
+        {
+            PlantenWaterenKeuze_1.SetActive(false);
+            PlantenWaterenKeuze_2.SetActive(false);
+            PlantenWaterenKeuze_3.SetActive(false);
+        }
 
         if (WasmachineActive)
         {
@@ -65,12 +83,24 @@ public class UImanager : MonoBehaviour
             WasmachineKeuze_2.SetActive(true);
             WasmachineKeuze_3.SetActive(true);
         }
+        else
+        {
+            WasmachineKeuze_1.SetActive(false);
+            WasmachineKeuze_2.SetActive(false);
+            WasmachineKeuze_3.SetActive(false);
+        }
 
         if (OpschonenActive)
         {
             OpschonenKeuze_1.SetActive(true);
             OpschonenKeuze_2.SetActive(true);
             OpschonenKeuze_3.SetActive(true);
+        }
+        else
+        {
+            OpschonenKeuze_1.SetActive(false);
+            OpschonenKeuze_2.SetActive(false);
+            OpschonenKeuze_3.SetActive(false);
         }
     }
 
